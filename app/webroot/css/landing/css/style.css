@@ -462,10 +462,30 @@ img {
     color: #3c3c3c;
 }
 
+.tagline {
+    position: relative;
+    padding-bottom: 16px !important;
+    font-size: 56px;
+    font-family: rl;
+    color: #3c3c3c;
+    font-weight: 900;
+}
+
+.tagline:after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #ff7657;
+    background: #F5CB5B;
+}
+
 .desh {
     position: relative;
     padding-bottom: 16px !important;
-    font-size: 36px;
+    font-size: 28px;
     font-family: rl;
     color: #3c3c3c;
 }
@@ -474,10 +494,11 @@ img {
     position: absolute;
     content: '';
     width: 50px;
-    height: 2px;
+    height: 0px;
     bottom: 0;
     left: 0;
     background: #ff7657;
+    background: #F5CB5B;
 }
 
 .banner-text p {
@@ -538,14 +559,16 @@ img {
 }
 
 .banner-img img {
-    border: 7px solid #ff7657;
-    border-radius: 50%;
+    /*border: 7px solid #ff7657;
+    border-radius: 50%;*/
+    max-width: 150%;
 }
 
 .banner-img {
     position: relative;
 }
 
+/*
 .banner-img::after {
     position: absolute;
     content: '';
@@ -575,6 +598,7 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
 }
+*/
 
 /*===========================
 3.0 *** OVERVIEW AREA START ***
@@ -608,8 +632,10 @@ img {
     width: 16px;
     height: 16px;
     border: 1px solid #ff7657;
+    border: 1px solid #F5CB5B;
     border-radius: 50%;
     background: #ff7657;
+    background: #F5CB5B;
     -webkit-box-shadow: 0 0 10px 5px rgba(255, 164, 144, 0.4);
     box-shadow: 0 0 10px 5px rgba(255, 164, 144, 0.4);
 }
@@ -664,9 +690,11 @@ img {
 
 .over3 i {
     color: #ff7657;
+    color: #F5CB5B;
     text-align: center;
     font-size: 27px;
     border: 3px solid #ff7657;
+    border: 3px solid #F5CB5B;
     width: 51px;
     height: 51px;
     line-height: 51px;
@@ -679,6 +707,7 @@ img {
 
 .over3:hover i {
     background: #ff7657;
+    background: #F5CB5B;
     color: white;
 }
 
@@ -759,7 +788,9 @@ img {
     width: 45px;
     height: 45px;
     background: #ff7657;
+    background: #F5CB5B;
     border: 2px solid #ff7657;
+    border: 2px solid #F5CB5B;
     border-radius: 50%;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -785,6 +816,7 @@ img {
 
 .add-new {
     color: #ff7657;
+    color: #F5CB5B;
     font-size: 16px;
     font-family: rb;
 }
@@ -809,11 +841,13 @@ img {
 
 .about-text a {
     color: #ff7657;
+    color: #F5CB5B;
     font-size: 16px;
     font-family: rb;
     padding: 14px 20px;
     background: #fff;
     border: 1px solid #ff7657;
+    border: 1px solid #F5CB5B;
     border-radius: 3px;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
@@ -822,6 +856,7 @@ img {
 
 .about-text a:hover {
     background: #ff7657;
+    background: #F5CB5B;
     color: #fff;
 }
 
@@ -839,7 +874,9 @@ img {
 .feature-text a {
     padding: 14px 20px;
     border: 1px solid #ff7657;
+    border: 1px solid #F5CB5B;
     color: #ff7657;
+    color: #F5CB5B;
     font-size: 16px;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
@@ -849,6 +886,7 @@ img {
 
 .feature-text a:hover {
     background: #ff7657;
+    background: #F5CB5B;
     color: white;
 }
 
@@ -862,6 +900,7 @@ img {
 .feature-text h4 {
     font-size: 22px;
     color: #ff7657;
+    color: #F5CB5B;
     font-family: rr;
     padding-bottom: 30px;
     position: relative;
@@ -875,6 +914,7 @@ img {
     width: 50px;
     height: 1px;
     background: #ff7657;
+    background: #F5CB5B;
 }
 
 .feature-text p {
@@ -999,6 +1039,7 @@ img {
     font-size: 56px;
     font-family: rl;
     color: #ffab98;
+    color: #F5CB5B;
 }
 
 .f-item h3 {
@@ -1017,6 +1058,7 @@ img {
     width: 50px;
     height: 2px;
     background: #ff7657;
+    background: #F5CB5B;
 }
 
 .f-item p {
@@ -1845,7 +1887,7 @@ img {
 }
 
 .fop-btm h2 {
-    color: #363535;
+    color: #f2f2f2;
     font-size: 16px;
     padding-top: 5px;
     font-family: rr;
@@ -1857,13 +1899,27 @@ img {
 
 .fop-btm a {
     color: #fa573a;
-    font-family: rb;
+    color: #F5CB5B;
+    /*font-family: rb;*/
+}
+
+.fop-btm a:hover {
+    color: #f2f2f2;
 }
 
 .newfs {
     padding-top: 0;
+    color: #F5CB5B;
 }
 
+.newfs a {
+    color: #F5CB5B;
+    padding: 0 5px;
+}
+
+.newfs a:hover {
+    color: #f2f2f2;
+}
 .footer-social i {
     width: 0;
     height: 0;

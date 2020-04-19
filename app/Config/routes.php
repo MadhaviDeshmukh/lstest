@@ -16,6 +16,11 @@
  * to use (in this case, /app/View/Admins/index.ctp)...
  */
 Router::connect('/', array('controller' => 'landing', 'action' => 'landingPage'));
+Router::connect('/about', array('controller' => 'about', 'action' => 'aboutPage'));
+Router::connect('/terms', array('controller' => 'terms', 'action' => 'termsPage'));
+Router::connect('/privacy', array('controller' => 'privacy', 'action' => 'privacyPage'));
+Router::connect('/cookies', array('controller' => 'cookies', 'action' => 'cookiesPage'));
+Router::connect('/contactus', array('controller' => 'contactus', 'action' => 'contactusPage'));
 Router::connect('/admin', array('controller' => 'admins', 'action' => 'index'));
 //Router::connect('/', array('controller' => 'admins', 'action' => 'index'));
 Router::connect('/login', array('controller' => 'users', 'action' => 'login'));

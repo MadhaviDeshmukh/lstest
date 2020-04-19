@@ -337,18 +337,34 @@ table th a:after {
     width: 100%;
 }
 .deal-name span {
-    font-size: 10px;
+    font-size: 13px;
 }
 .deal-name a{
     font-weight: bold;
     text-transform: capitalize;
+    font-size: 13px;
+}
+.deal-company {
+    font-size: 12px;
 }
 .deal-module {
     float: left;
     width: 100%;
     height: 23px;
 }
+.deal-links {
+    width: 100%;
+    height: 23px;
+    padding: 10px 0 0 0;
+}
+.deal-links span{
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    cursor:pointer;
+}
 .deal-module span{
+    padding: 5px 0;
     width: 25%;
     float: left;
     font-size: 10px;
@@ -362,6 +378,9 @@ table th a:after {
 .deal-span {
     float: left;
     width: 100%;
+}
+.deal-footer {
+    height: 25px;
 }
 .stage-name {
     border-color: transparent -moz-use-text-color;
@@ -391,6 +410,7 @@ table th a:after {
     border-left-color: #8B9594;
     border-left-color: #CCCCCC;
     border-left-color: #7E797F;
+    border-left-color: #DEDEDE;
     right: -14px;
     top: 0;
     z-index: 2;
@@ -413,13 +433,16 @@ table th a:after {
     background-color: #8B9594;
     background-color: #CCCCCC;
     background-color: #7E797F;
+    background-color: #DEDEDE;
     border-bottom: 0px solid #fff;
     border-top: 0px solid #fff;
     color: #fff;
-    font-weight: bold;
+    color: #333;
+    /*font-weight: bold;*/
     height: 38px;
-    padding-top: 3px;
+    padding-top: 6px;
     text-align: center;
+    text-transform: uppercase;
 }
 .stage-div ul {
     border: none !important;
@@ -438,7 +461,7 @@ table th a:after {
     padding: 0 5px 3px !important;
     width: 100%;
     border: 1px solid #c0c0c0;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: move;
 }
 .manager-home .main-box.no-header {
@@ -1554,3 +1577,16 @@ blockquote {
 .stage-li {
  list-style-type: none;   
 }
+@media screen and (min-width: 768px) {
+        .modal-dialog {
+          width: 900px; /* New width for default modal */
+        }
+        .modal-sm {
+          width: 350px; /* New width for small modal */
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .modal-lg {
+          width: 950px; /* New width for large modal */
+        }
+    }

@@ -4,16 +4,17 @@
  */
 
 ?>
-<!--Add Deal Modal --> 
+<!--Add Job Modal --> 
 <div class="modal fade" id="dealM">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><?php echo __('Job Details'); ?></h4>
+                <h4 class="modal-title"><?php echo __('Add a Job'); ?></h4>
             </div>
             <?php echo $this->Form->create('Deal', array('url' => array('controller' => 'Jobs', 'action' => 'add'), 'inputDefaults' => array('label' => false, 'div' => false), 'class' => 'vForm')); ?>
-            <div class="modal-body tab-modal"></div>
+	    <div class="modal-body tab-modal" style="clear: both"> &nbsp;
+            </div>
             <div class="modal-footer">			
                 <button class="btn btn-primary blue btn-sm" type="submit"><i class="fa fa-check"></i> <?php echo __('Add'); ?></button>
                 <button class="btn default btn-sm" data-dismiss="modal" type="button"><i class="fa fa-times"></i> <?php echo __('Cancel'); ?></button>
@@ -58,6 +59,105 @@
     </div>
 </div>
 <!--End View label modal -->
+<!-- Delete modal -->
+<div class="modal fade" id="delM">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h4 class="modal-title"><?php echo __('Confirmation'); ?></h4>
+            </div>
+            <?php echo $this->Form->create('Deal', array('url' => array('action' => 'delete'), 'id' => 'confirm-form')); ?>
+            <?php echo $this->Form->input('id', array('type' => 'hidden', 'value' => h($deal['Deal']['id']))); ?>
+            <?php echo $this->Form->input('Item.id', array('type' => 'hidden')); ?>
+            <?php echo $this->Form->input('Deal.action', array('type' => 'hidden')); ?>
+            <div class="modal-body">						
+                <p> <?php echo __('Are you sure?'); ?></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary delSubmit"  type="button"><?php echo __('Yes'); ?></button>
+                <button class="btn default" data-dismiss="modal" type="button"><?php echo __('No'); ?></button>
+            </div>
+            <?php echo $this->Form->end(); ?>
+            <?php echo $this->Js->writeBuffer(); ?>
+        </div>
+    </div>
+</div>
+<!-- /Delete modal -->
+<!-- Star Job modal -->
+<div class="modal fade" id="starJob">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h4 class="modal-title"><?php echo __('&nbsp;'); ?></h4>
+            </div>
+            <?php echo $this->Form->create('Job', array('url' => array('action' => 'favorite'), 'class' => 'vForm1')); ?>
+            <?php echo $this->Form->input('id', array('type' => 'hidden', 'value' => h($deal['Deal']['id']))); ?>
+            <div class="modal-body">						
+                <p><strong> <?php echo __('Why do you like this job?'); ?></strong></p>
+                <div class="form-group">
+                    <label></label>
+                    <?php echo $this->Form->input('History.reason', array('type' => 'textarea', 'class' => 'form-control input-inline input-medium', 'Placeholder' => __(''), 'div' => false, 'label' => false, 'rows' => '4')); ?>	
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary blue btn-sm" type="submit"><i class="fa fa-star"></i> <?php echo __('Favorite'); ?></button>
+                <button class="btn default btn-sm" data-dismiss="modal" type="button"><i class="fa fa-times"></i> <?php echo __('Cancel'); ?></button>
+            </div>
+            <?php echo $this->Form->end(); ?>
+            <?php echo $this->Js->writeBuffer(); ?>
+        </div>
+    </div>
+</div>
+<!-- Archive Job modal -->
+<div class="modal fade" id="archiveJob">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h4 class="modal-title"><?php echo __('Confirmation'); ?></h4>
+            </div>
+            <?php echo $this->Form->create('Job', array('url' => array('action' => 'archive'), 'class' => 'vForm1')); ?>
+            <?php echo $this->Form->input('id', array('type' => 'hidden', 'value' => h($deal['Deal']['id']))); ?>
+            <div class="modal-body">						
+                <p><strong> <?php echo __('Do you want to provide a reason for archiving this job?'); ?></strong></p>
+                <div class="form-group">
+                    <label></label>
+                    <?php echo $this->Form->input('History.reason', array('type' => 'textarea', 'class' => 'form-control input-inline input-medium', 'Placeholder' => __('Reason for archiving'), 'div' => false, 'label' => false, 'rows' => '4')); ?>	
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary blue btn-sm" type="submit"><i class="fa fa-check"></i> <?php echo __('Archive'); ?></button>
+                <button class="btn default btn-sm" data-dismiss="modal" type="button"><i class="fa fa-times"></i> <?php echo __('Cancel'); ?></button>
+            </div>
+            <?php echo $this->Form->end(); ?>
+            <?php echo $this->Js->writeBuffer(); ?>
+        </div>
+    </div>
+</div>
+<!-- Delete Job modal -->
+<div class="modal fade" id="deleteJob">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" class="close" type="button">&times;</button>
+                <h4 class="modal-title"><?php echo __('Are you sure?'); ?></h4>
+            </div>
+            <?php echo $this->Form->create('Job', array('url' => array('action' => 'delete'), 'class' => 'vForm1')); ?>
+            <?php echo $this->Form->input('id', array('type' => 'hidden', 'value' => h($deal['Deal']['id']))); ?>
+            <div class="modal-body">						
+                <p> <?php echo __('Deleting the job will completely remove all its associated data and tasks as well.'); ?></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary"  type="submit"><?php echo __('Yes'); ?></button>
+                <button class="btn default" data-dismiss="modal" type="button"><?php echo __('No'); ?></button>
+            </div>
+            <?php echo $this->Form->end(); ?>
+            <?php echo $this->Js->writeBuffer(); ?>
+        </div>
+    </div>
+</div>
 <!--Content Section -->
 <div class="row" >
     <div class="col-lg-12">
@@ -72,7 +172,7 @@
                     </div>
                 <?php endforeach; ?>
                 <div class="col-lg-2">
-                    <h1 class="pull-left"><?= h($pipeline['Pipeline']['name']); ?></h1>
+                    <!--<h1 class="pull-left"><?= h($pipeline['Pipeline']['name']); ?></h1>-->
                 </div>
                 <div class="col-lg-5">
 		    <?php echo $this->Form->create('Admin', array('url' => array('controller' => 'admins', 'action' => 'index'), 'inputDefaults' => array('label' => false, 'div' => false), 'class' => '')); ?>
@@ -103,7 +203,7 @@
                     <?php echo $this->Js->writeBuffer(); ?>
                 </div>
                 <div class="col-lg-2 form-group">
-                    <?php echo $this->Form->input('deal_id', array('type' => 'text', 'class' => 'form-control search-data', 'placeholder' => __('Search Jobs'), 'data-name' => 'deals')); ?>
+                    <?php echo $this->Form->input('deal_id', array('type' => 'text', 'class' => 'form-control search-data', 'placeholder' => __('Search Jobs'), 'data-name' => 'jobs')); ?>
                 </div>
                 <div class="col-lg-2 col-sm-6 col-xs-6 btn-group">
                     <button type="button" class="btn btn-primary btn-sm active mr-1" ref='popover' data-content="Pipeline View"><i class="fa fa-th-large"></i></button>
@@ -138,32 +238,58 @@
                                 <div class="stage-inner" data-id="<?= h($stage['Stage']['id']); ?>">
                                     <ul id="<?= h($stage['Stage']['id']); ?>" class="droppable sortable stage-ul"> 
                                         <?php $dealCount = count($stage['Deal']); ?>
-                                        <?php foreach ($stage['Deal'] as $row): ?>
+					<?php foreach ($stage['Deal'] as $row): ?>
+						<?php //print_r($row); ?>
                                             <!--Deal Box-->
                                             <li class="ui-state-default" id="<?= h($row['Deal']['id']); ?>">
-                                                <div class="deal-labels">
+                                                <!--<div class="deal-labels">
                                                     <?php foreach ($row['Labels'] as $label): ?>
                                                         <div class="deal-label <?= h($label['Label']['color']); ?>"  ref='popover' data-content='<?= h($label['Label']['name']); ?>'></div>
                                                     <?php endforeach; ?>
-                                                </div>
-                                                <div class="deal-name">
-                                                    <i class="fa fa-eye hidden"></i> <?php echo $this->Html->link(h($row['Deal']['name']), array('controller' => 'jobs', 'action' => 'view', h($row['Deal']['id'])), array('escape' => false, 'ref' => 'popover', 'data-content' => 'View Job')); ?>
-                                                    <span class="pull-right dv-label" data-target="#uDealSM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="Labels" ref = 'popover' data-content ='Labels'>
+                                                </div>-->
+                                                <div class="deal-name ellipsis">
+                                                    <!--<i class="fa fa-eye hidden"></i> <?php echo $this->Html->link(h(substr($row['Deal']['name'],0,28).' ...'), array('controller' => 'jobs', 'action' => 'view', h($row['Deal']['id'])), array('escape' => false, 'ref' => 'popover', 'data-content' => h($row['Deal']['name']))); ?>-->
+                                                    <i class="fa fa-eye hidden"></i> <?php echo $this->Html->link(h($row['Deal']['name']), array('controller' => 'jobs', 'action' => 'view', h($row['Deal']['id'])), array('escape' => false, 'ref' => 'popover', 'data-content' => h($row['Deal']['name']))); ?>
+                                                    <!--<span class="pull-right dv-label" data-target="#uDealSM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="Labels" ref = 'popover' data-content ='Labels'>
                                                         <i class="fa fa-tag hidden"></i>
-                                                    </span>
+                                                    </span>-->
                                                 </div>                                            
+                                                <div class="deal-company">
+						    <span> <?= h($row['Company']['name']); ?></span>
+                                                </div>
                                                 <div class="deal-module">
                                                     <span> <?= h($row['files']); ?> <?php echo __('Files'); ?></span>
-                                                    <span class="text-center"><?= h($row['tasks_u']) . '/' . h($row['tasks']); ?> <?php echo __('Tasks'); ?></span> 
-                                                    <span class="text-right"><?= h($row['contacts']); ?> <?php echo __('Contacts'); ?></span>
-                                                    <span class="text-right view-modal" data-target="#uDealM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Edit Job'>
+                                                    <!--<span class="text-center"><?= h($row['tasks_u']) . '/' . h($row['tasks']); ?> <?php echo __('Tasks'); ?></span> -->
+                                                    <span class="text-left"><?= h($row['tasks_u']); ?> <?php echo __('Tasks'); ?></span> 
+                                                    <span class="text-left"><?= h($row['contacts']); ?> <?php echo __('Contacts'); ?></span>
+                                                    <!--<span class="text-right view-modal" data-target="#uDealM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Edit Job'>
                                                         <i class="fa fa-edit"></i>
-                                                    </span>                                                                                           
+                                                    </span>                                                                                           -->
                                                 </div>
-						<div class="">
-                                                    <span class="text-right view-modal" data-target="#uDealM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Edit Job'>
-                                                        <i class="fa fa-edit"></i>
-                                                    </span>                                                                                           
+                                                <div class="deal-links">
+                                                    <span class="text-right">
+						    <?php if($row['Deal']['status'] == 1) { ?>
+							<a class="star-job" href="<?= '/jobs/active/' . h($row['Deal']['id']); ?>" data-name="view" ref = 'popover' data-content ='Unfavorite Job'>
+                                                                <i class="fa fa-star yellow"></i>
+                                                        </a>&nbsp;
+						    <?php } else { ?>
+							<a class="star-job view-modal" href="#" data-toggle="modal" data-target="#starJob" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Favorite Job'>
+                                                                <i class="fa fa-star-o"></i>
+                                                        </a>&nbsp;
+						    <?php } ?>
+                                                        <a class="archive-job view-modal" href="#" data-toggle="modal" data-target="#archiveJob" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Hide Job'>
+                                                            <i class="fa fa-eye-slash"></i>
+                                                        </a>&nbsp;
+                                                        <a class="view-modal" href="#" data-toggle="modal" data-target="#uDealM" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Edit Job'>
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>&nbsp;
+                                                        <a class="delete-job view-modal" href="#" data-toggle="modal" data-target="#deleteJob" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Delete Job'>
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+						<div class="deal-footer">
+                                                    <span>&nbsp;</span>
                                                     <?php /* disabling user avatar
                                                     if (!empty($row['Users'])) :
                                                         foreach ($row['Users'] as $user):
@@ -200,3 +326,29 @@
     </div>
 </div>
 <!--End Content Section -->
+<script>
+$(document).on("click", ".star-job", function () {
+     var myJobId = $(this).data('id');
+     //$(".modal-content #JobId").val( myJobId );
+     $("#starJob #JobId").val( myJobId );
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});
+$(document).on("click", ".archive-job", function () {
+     var myJobId = $(this).data('id');
+     //$(".modal-content #JobId").val( myJobId );
+     $("#archiveJob #JobId").val( myJobId );
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});
+$(document).on("click", ".delete-job", function () {
+     var myJobId = $(this).data('id');
+     //$(".modal-content #JobId").val( myJobId );
+     $("#deleteJob #JobId").val( myJobId );
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});
+</script>

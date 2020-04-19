@@ -81,7 +81,7 @@
     <!-- Preloader Part End -->
 
     <!-- HEADER AREA START -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="background: #F2F2F2!important">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="/img/LastStepLogo.png"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,9 +105,10 @@
     <!-- BANNER AREA START -->
     <section id="banner">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 banner-text">
-                    <h4 class="desh">You've spent months searching for jobs and preparing for interviews. We help you with the last step, the application and tracking of your interviews. </h4>
+            <div class="row" style="padding: 50px 0">
+                <div class="col-lg-12 banner-text">
+                    <h4 class="tagline">Last Step in your job search </h4>
+                    <h4 class="desh">You've spent months preparing for inteviews and searching for jobs. Last Step helps you with the tracking of your job application. </h4>
                     <p></p>
                     <!--<form>
                         <input type="email" class="version2" placeholder="Enter your email">
@@ -130,7 +131,7 @@ function onSignIn(googleUser) {
 	console.log("ID Token: " + id_token);
 
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'http://laststep.co/logingoogle');
+	xhr.open('POST', 'https://laststep.co/logingoogle');
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xhr.onload = function() {
 		var returnedData = JSON.parse(xhr.responseText);
@@ -151,50 +152,80 @@ function onSignIn(googleUser) {
 </script>
 <!--<a href="#" onclick="signOut();">Sign out</a>-->
                 </div>
-                <div class="col-lg-6 col-sm-9 col-md-8 m-sm-auto m-md-auto">
+              <!--  <div class="col-lg-6 col-sm-9 col-md-8 m-sm-auto m-md-auto">
                     <div class="row xm_top_pa">
                         <div class="col-lg-9 m-auto">
                             <div class="banner-img">
-                                <img src="https://www.sakibul.com/demos/html/brandify/demo/images/banner1.jpg" alt="banner-img" class="img-fluid">
+                                <img src="https://i.imgur.com/HZPI9JW.png" alt="banner-img" class="img-fluid">
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </section>
     <!-- BANNER AREA END -->
 
     <!-- FEATURE AREA START -->
-    <section id="feature">
+    <section id="feature" style="background: #F2F2F2">
         <div class="container">
-            <div class="row">
+           <!-- <div class="row">
                 <div class="col-lg-12 text-center overview-heading">
                     <h3><span>Features</span></h3>
                 </div>
-            </div>
+            </div>-->
             <div class="row pt-5">
                 <div class="col-lg-6 col-md-6">
-                    <img src="https://www.sakibul.com/demos/html/brandify/demo/images/f1.jpg" alt="feature-img" class="img-fluid">
+                    <img src="https://i.imgur.com/wFME75Y.png" alt="banner-img" class="img-fluid">
                 </div>
                 <div class="col-lg-5 col-md-6">
                     <div class="f-item remove-border">
-                        <span>01.</span>
+                        <span>TRACK</span>
                         <h3>Track your applications, start to finish</h3>
                         <p>Single page view of all the stages of your application. Easily move between stages.</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="row pt-2">
-                <div class="col-lg-6 xm_dis col-md-6">
-                    <img src="https://www.sakibul.com/demos/html/brandify/demo/images/f2.jpg" alt="feature-img" class="img-fluid">
-                </div>
+        </div>
+    </section>
+    <section id="feature" style="background: #FFF">
+        <div class="container">
+            <div class="row pt-5">
                 <div class="col-lg-5 col-md-6">
                     <div class="f-item sm_top_ma ">
-                        <span>02.</span>
-                        <h3>Keep your documents in one place</h3>
-                        <p>Keep track of all the versions of your resume and cover letters.</p>
+                        <span>DOCUMENTS</span>
+                        <h3>Keep your resume next to your job</h3>
+                        <p>Keep track of all the versions of your resume and cover letters per job.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 xm_dis2 col-md-6">
+                    <img src="https://i.imgur.com/yrbQs7a.png" alt="feature-img" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feature" style="background: #F2F2F2">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-lg-6 col-md-6">
+                    <img src="https://i.imgur.com/3atBSBQ.png" alt="feature-img" class="img-fluid">
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="f-item fi-color remove-border">
+                        <span>TASKS, NOTES</span>
+                        <h3>Track tasks and add notes</h3>
+                        <p>Get Things Done by creating tasks and maintaining a journal for each job.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row pt-2">
+                <div class="col-lg-5 col-md-6">
+                    <div class="f-item sm_top_ma ">
+                        <span>NETWORK</span>
+                        <h3>Contacts list</h3>
+                        <p>Maintain list of contacts relevant to each job.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 xm_dis2 col-md-6">
@@ -213,29 +244,29 @@ function onSignIn(googleUser) {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
     <!-- FEATURE AREA END -->
 
     <!-- COPY_RIGHT AREA START -->
-    <section id="footer-btm">
+    <section id="footer-btm" style="background: #343533">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 moja-loss">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="fop-btm">
-                                <h2>Copyright &copy; 2019. All rights reserved by <a href="#">Last Step</a></h2>
+                                <h2>Copyright &copy; 2020. All rights reserved by <a href="#">Last Step</a></h2>
                             </div>
                         </div>
                         <div class="col-lg-6 text-center">
                             <div class="footer-social newfs">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="/about">About</a>
+                                <a href="/terms">Terms and Conditions</a>
+                                <a href="/privacy">Privacy Policy</a>
+                                <a href="/cookies">Cookie Policy</a>
+                                <a href="/contactus">Contact</a>
                             </div>
                         </div>
                     </div>

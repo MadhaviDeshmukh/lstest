@@ -9,6 +9,7 @@
  */
 
 ?>
+
 <?php if (!empty($task)) { ?>
     <?php echo $this->Form->input('Task.id', array('type' => 'hidden', 'value' => h($task['Task']['id']))); ?>
     <?php echo $this->Form->input('Task.deal_id', array('type' => 'hidden', 'value' => h($task['Task']['deal_id']))); ?>
@@ -76,7 +77,9 @@
     <?php echo $this->Js->writeBuffer(); ?>
 
 <?php endif; ?>
-<!-- Add Deal Modal -->
+
+
+<!-- Add Job Modal -->
 <?php if (!empty($box)) : ?>
     <!-- Tabs -->
     <ul class="nav nav-tabs">
@@ -85,15 +88,17 @@
     </ul>
     <div class="tab-content">
         <!-- Deal details Tab -->
-        <div id="tab-deal" class="tab-pane fade active in">
+	<div id="tab-deal" class="tab-pane fade active in">
+          <div style="padding-top: 20px">
+          <div class="col-sm-6 form-group">
             <div class="form-group">
                 <label>Title</label>
                 <?php echo $this->Form->input('Deal.name', array('type' => 'text', 'class' => 'form-control input-inline input-medium', 'Placeholder' => __('Job Title'), 'label' => false, 'div' => false)); ?>	
             </div>
             <div class="form-group">
                 <label>Description</label>
-                <?php echo $this->Form->input('Deal.description', array('type' => 'textarea', 'rows' => '3', 'class' => 'form-control input-inline input-medium', 'row' => 3, 'label' => false, 'div' => false)); ?>	
-            </div>
+                <?php echo $this->Form->input('Deal.description', array('type' => 'textarea', 'rows' => '30', 'class' => 'form-control input-inline input-medium', 'row' => 30, 'label' => false, 'div' => false)); ?>	
+	    </div>
             <!--<div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon"> <?= $this->Session->read('Auth.User.currency_symbol'); ?></span>
@@ -104,6 +109,8 @@
                 <?php echo $this->Form->input('Deal.pipeline_id', array('type' => 'select', 'class' => 'select-box-search full-width', 'options' => array($this->Common->getPipelineList()), 'empty' => __('Select Pipeline'))); ?>	
 	    </div>-->
             <input type=hidden name="data[Deal][pipeline_id]" value="1">
+	  </div>
+          <div class="col-sm-6 form-group">
             <div class="form-group">
                 <label><?php echo __('Application Stage'); ?></label>
                 <?php echo $this->Form->input('Deal.stage_id', array('type' => 'select', 'class' => 'select-box-search full-width', 'options' => array(), 'label' => false, 'div' => false)); ?>		
@@ -147,7 +154,10 @@
             <div class="form-group">
                 <label><?php echo __('Notes'); ?></label>
                 <?php echo $this->Form->input('Deal.notes', array('type' => 'textarea', 'rows' => '3', 'class' => 'form-control input-inline input-medium', 'row' => 3, 'label' => false, 'div' => false)); ?>	
-            </div>
+	    </div>
+	  </div>
+	  <div style="clear:both"></div>
+          </div>
 
 
         </div>
@@ -257,6 +267,21 @@ if (!empty($product)) :
     $('#DealPipelineId').change(function () {
         $('#DealStageId').load(getUrl + 'Stages/lists/' + $(this).val());
     });
-        $('#DealStageId').load(getUrl + 'Stages/lists/1');
+    $('#DealStageId').load(getUrl + 'Stages/lists/1');
+
+  tinymce.init({
+      selector: '#DealDescription',
+      height: 500,
+      plugins: "paste",
+      menubar: "edit",
+      paste_webkit_styles: "none"
+  });
+  tinymce.init({
+      selector: '#DealNotes',
+      height: 280,
+      plugins: "paste",
+      menubar: "edit",
+      paste_webkit_styles: "none"
+  });
 </script>
 <!-- End Custom Jquery -->

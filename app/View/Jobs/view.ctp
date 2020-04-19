@@ -301,7 +301,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="main-box clearfix">	
+                <div class="main-box clearfix" style="background: #fff">	
                     <div class="tabs-wrapper tabs-no-header">
                         <!-- Tabs -->
                         <ul class="nav nav-tabs deal-tab">

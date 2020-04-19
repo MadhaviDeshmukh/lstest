@@ -60,26 +60,31 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="main-box clearfix">	
+                <div class="main-box clearfix" style="background: #fff !important">	
                     <div class="tabs-wrapper tabs-no-header">
                         <?php echo $this->Form->input('id', array('type' => 'hidden', 'id' => 'dealid', 'value' => h($deal['Deal']['id']))); ?>
                         <!-- Tabs -->
                         <ul class="nav nav-tabs deal-tab">                                                                           
-                            <li class="active"><a data-toggle="tab" href="#tab-tasks" ><?php echo __('Task'); ?></a></li>
+                            <li class="active"><a data-toggle="tab" href="#tab-details" ><?php echo __('Details'); ?></a></li>
+                            <li><a data-toggle="tab" href="#tab-tasks" ><?php echo __('Task'); ?></a></li>
                             <!--<li><a data-toggle="tab" href="#tab-products" ><?php echo __('Product'); ?></a></li> 
                             <li><a data-toggle="tab" href="#tab-sources" ><?php echo __('Source'); ?></a></li>-->
-                            <li><a data-toggle="tab" href="#tab-contacts"><?php echo __('Contacts'); ?></a></li>
                             <li><a data-toggle="tab" href="#tab-files"><?php echo __('Files'); ?></a></li>                           
                             <!--<li><a data-toggle="tab" href="#tab-discussions"><?php echo __('Discussion'); ?></a></li>
                             <li><a data-toggle="tab" href="#tab-feedback"><?php echo __('Customer Feedback'); ?></a></li>-->
                             <li><a data-toggle="tab" href="#tab-notes"><?php echo __('Notes'); ?></a></li>                            
+                            <li><a data-toggle="tab" href="#tab-contacts"><?php echo __('Contacts'); ?></a></li>
                             <!--<li><a data-toggle="tab" href="#tab-customs"><?php echo __('Custom Fields'); ?></a></li>-->
                         </ul>
                         <!--End Tabs -->
                         <!-- Tabs Content -->
                         <div class="tab-content">                        
+                            <!-- Details Tab -->
+                            <div id="tab-details" class="tab-pane fade in active">
+                                <?php echo $this->element('deal-info'); ?>
+                            </div>
                             <!-- Task Tab -->
-                            <div id="tab-tasks" class="tab-pane fade in active">
+                            <div id="tab-tasks" class="tab-pane fade">
                                 <?php echo $this->element('deal-task'); ?>
                             </div>
                             <!-- Product Tab 

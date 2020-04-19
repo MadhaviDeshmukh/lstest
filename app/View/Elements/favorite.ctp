@@ -25,7 +25,7 @@
                         <td><?= h($row['History']['deal_name']); ?></td>
                         <td> <?= h($row['History']['stage']); ?> </td>
                         <td> <?= h($row['History']['reason']); ?> </td>
-                        <td> <?php echo $this->Html->link('Unfavorite', array('controller' => 'deals', 'action' => 'active', h($row['History']['id'])), array('escape' => false, 'class' => 'btn btn-primary btn-xs')); ?> </td>
+                        <td> <?php echo $this->Html->link('Unfavorite', array('controller' => 'jobs', 'action' => 'active', h($row['History']['id'])), array('escape' => false, 'class' => 'btn btn-primary btn-xs')); ?> </td>
                     </tr>
                     <?php
                 endforeach;

@@ -1,7 +1,8 @@
 html, body {
-    font-family: gdsherpa,"Times New Roman",serif;
-    font-weight: 700!important;
-    /*font-family: "Open Sans", sans-serif;*/
+    /*font-family: gdsherpa,"Times New Roman",serif;
+    font-weight: 700!important;*/
+    font-family: 'Roboto', sans-serif;
+    font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 @media (max-width: 419px)  {
@@ -259,7 +260,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 }
 .dropdown-menu>li>a {
     color: #707070;
-    color: #CCCCCC;
+    color: #555;
     font-size: 0.875em;
     line-height: 1.7;
     padding-left: 35px;
@@ -267,7 +268,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
     background-color: #f6f6f6;
-    color: #707070;
+    color: #000;
 }
 .dropdown-menu>li>a>i {
     position: absolute;
@@ -504,9 +505,10 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     font-weight: bold;
     line-height: 40px;
     text-align: center;
+    background: #e5e5e5;
 }
 .notifications-list .item {
-    border-top: 1px solid #f6f6f6;
+    border-top: 1px solid #d5d5d5;
     line-height: 1.4;
     padding-bottom: 0;
     padding-top: 0;
@@ -794,6 +796,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 .navbar-nav .open .dropdown-menu {
     background-color: #FFFFFF;
     background-color: #333533;
+    background-color: #F5F5F5;
     border: none;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
     position: absolute;
@@ -1492,7 +1495,8 @@ a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.acti
 }
 .modal-header {;
     padding: 6px 10px;
-    background-image: linear-gradient(to right, #000 0%, #33c3da 100%);
+    /*background-image: linear-gradient(to right, #000 0%, #f5cb5b 100%);*/
+    background-color: #f5cb5b;
     color: #fff;
 }
 .modal-title {
@@ -4204,10 +4208,15 @@ svg {
     color: #333;
     background-color: transparent!important;
     border: 0px;
-     white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
-     font-weight: 400;
-     font-size: 15px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.job-description li {
+    margin: 5px 0;
+}
+.ellipsis {
+	overflow: hidden;
+  	white-space: nowrap;
+  	text-overflow: ellipsis;
 }

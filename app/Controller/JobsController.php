@@ -509,7 +509,7 @@ class JobsController extends AppController
     {
         // autorender off for view
         $this->autoRender = false;
-        $dealId = $this->request->data['Deal']['id'];
+        $dealId = $this->request->data['Job']['id'];
         if (!empty($dealId)) {
             //--------- Post/Ajax request  -----------
             if ($this->request->isPost() || $this->RequestHandler->isAjax()) {
@@ -641,7 +641,8 @@ class JobsController extends AppController
                 $this->activity($dealId, $deal['Deal']['name'], 'won_Deal');
                 //redirect to  won deals page
                 return $this->redirect(
-                        array('controller' => 'jobs', 'action' => 'favorite')
+                        //array('controller' => 'jobs', 'action' => 'favorite')
+                        array('controller' => 'admin', 'action' => 'index')
                 );
             }
         }
@@ -712,7 +713,8 @@ class JobsController extends AppController
                 $this->activity($dealId, $deal['Deal']['name'], 'loss_Deal');
                 //redirect to deals loss page
                 return $this->redirect(
-                        array('controller' => 'jobs', 'action' => 'archive')
+                        //array('controller' => 'jobs', 'action' => 'archive')
+                        array('controller' => 'admin', 'action' => 'index')
                 );
             }
         }
@@ -737,6 +739,7 @@ class JobsController extends AppController
         $history = $this->History->findById($Id);
         $dealId = $history['History']['deal_id'];
         $this->Deal->id = $dealId;
+        //$this->Deal->id = $Id;
         //update deal status to active
         $result = $this->Deal->saveField('status', '0');
         if ($result) {

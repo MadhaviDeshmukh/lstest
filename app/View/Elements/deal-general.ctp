@@ -7,7 +7,7 @@
 ?>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
-        <div class="main-box deal-detail">
+        <div class="main-box deal-detail" style="background: #fff">
             <!--<span ><strong><i class="fa fa-money"></i></strong> <?= h($this->Session->read('Auth.User.currency_symbol')); ?><?= ($deal['Deal']['price']) ? h($deal['Deal']['price']) : '0'; ?></span>-->
             <!--<span><strong><i class="fa fa-filter"></i><?php echo __('Pipeline'); ?>:</strong> <?= h($deal['Pipeline']['name']); ?></span>-->
             <span><strong><?php echo __('Current Stage'); ?>: </strong><?= h($deal['Stage']['name']); ?></span>
@@ -92,14 +92,14 @@
 <div class="row">
     <!-- Description -->
     <div class="col-md-12">
-        <div class="main-box deal-details">
+        <div class="main-box deal-details" style="background: #fff">
             <!--<header class="main-box-header clearfix">
                 <h2 class="pull-left"><?php echo __('Job Details'); ?></h2>
             </header> -->
             <div class="main-box-body clearfix tasks-inner2">
                 <div class="row">
                     <?php //echo $this->Form->input('NoteDeal.note', array('type' => 'textarea', 'class' => 'description full-width', 'label' => false, 'div' => false, 'value' => (isset($deal['Deal']['description'])) ? h($deal['Deal']['description']) : '', 'readonly' => 'readonly')); ?>
-                    <?php echo '<pre class="job-description">' . $deal['Deal']['description'] . '</pre>' ; ?>
+                    <?php echo '<div class="job-description">' . $deal['Deal']['description'] . '</div>' ; ?>
                 </div>
             </div>
         </div>
@@ -270,7 +270,7 @@
     </div>    
     <!-- Activity -->
     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-        <div class="main-box">
+        <div class="main-box" style="background: #fff">
             <header class="main-box-header clearfix">
                 <h2 class="pull-left"><?php echo __('Activity'); ?></h2>
             </header>

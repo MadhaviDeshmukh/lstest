@@ -30,14 +30,14 @@
                         </li>
                         <?php if ($this->Common->isAdminPermission('3')) : ?>
                             <li class="<?= ($action == 'tasks') ? 'active' : 'nav-noactive' ?>">
-                                <a class="dropdown-toggle" href="#"><i class='fa fa-tasks'></i><span><?php echo __('Tasks'); ?></span><i class="fa fa-angle-right drop-icon"></i></a>
+                                <a class="dropdown-toggle" href="#"><i class='fa fa-check'></i><span><?php echo __('Tasks'); ?></span><i class="fa fa-angle-right drop-icon"></i></a>
                                 <ul class="submenu">
                                     <li><a class="<?= ($action == 'tasks' && ($this->params['action'] == 'index')) ? 'active' : 'nav-noactive' ?>" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'index')); ?>"><?php echo __('Task'); ?></a></li>
                                     <li><a class="<?= ($action == 'tasks' && ($this->params['action'] == 'lists')) ? 'active' : 'nav-noactive' ?>" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'lists')); ?>"><?php echo __('All Task'); ?></a></li>
                                 </ul>
                             </li>
                         <?php else : ?>
-                            <li class="<?= ($action == 'tasks') ? 'active' : 'nav-noactive' ?>"><a href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'index')); ?>"><i class='fa fa-tasks'></i><span><?php echo __('Task'); ?></span></a> </li>
+                            <li class="<?= ($action == 'tasks') ? 'active' : 'nav-noactive' ?>"><a href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'index')); ?>"><i class='fa fa-check'></i><span><?php echo __('Task'); ?></span></a> </li>
                         <?php endif; ?>
                         <li class="<?= ($action == 'calenders') ? 'active' : 'nav-noactive' ?>"><a href="<?php echo $this->Html->url(array('controller' => 'calenders', 'action' => 'index')); ?>"><i class='fa fa-calendar'></i><span><?php echo __('Calendar'); ?></span></a> </li>
                         <li class="<?= ($action == 'invoices' || $action == 'expenses') ? 'active' : 'nav-noactive' ?>">
@@ -97,14 +97,14 @@
                         </li>
                         <?php if ($this->Common->isManager()) : ?>
                             <li class="<?= ($action == 'tasks') ? 'active' : 'nav-noactive' ?>">
-                                <a class="dropdown-toggle" href="#"><i class='fa fa-tasks'></i><span><?php echo __('Tasks'); ?></span><i class="fa fa-angle-right drop-icon"></i></a>
+                                <a class="dropdown-toggle" href="#"><i class='fa fa-check'></i><span><?php echo __('Tasks'); ?></span><i class="fa fa-angle-right drop-icon"></i></a>
                                 <ul class="submenu">
                                     <li><a class="<?= ($action == 'tasks' && ($this->params['action'] == 'index')) ? 'active' : 'nav-noactive' ?>" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'index')); ?>"><?php echo __('My Task'); ?></a></li>
                                     <li><a class="<?= ($action == 'tasks' && ($this->params['action'] == 'lists')) ? 'active' : 'nav-noactive' ?>" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'lists')); ?>"><?php echo __('Group Task'); ?></a></li>
                                 </ul>
                             </li>
                         <?php else : ?>
-                            <li class="<?= ($action == 'tasks') ? 'active' : 'nav-noactive' ?>"><a href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'index')); ?>"><i class='fa fa-tasks'></i><span><?php echo __('Tasks'); ?></span></a> </li>          
+                            <li class="<?= ($action == 'tasks') ? 'active' : 'nav-noactive' ?>"><a href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'index')); ?>"><i class='fa fa-check'></i><span><?php echo __('Tasks'); ?></span></a> </li>          
                         <?php endif; ?>
                         <li class="<?= ($action == 'calenders') ? 'active' : 'nav-noactive' ?>"><a href="<?php echo $this->Html->url(array('controller' => 'calenders', 'action' => 'index')); ?>"><i class='fa fa-calendar'></i><span><?php echo __('Calendar'); ?></span></a> </li>                       
                         <!-- <li class="<?= ($action == 'invoices') ? 'active' : 'nav-noactive' ?>"><a  href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'index')); ?>"><i class='fa fa-file-text-o'></i><span><?php echo __('Invoices'); ?></span></a></li> -->

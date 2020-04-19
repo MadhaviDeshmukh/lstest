@@ -16,7 +16,7 @@ class AdminsController extends AppController
      *
      * @var array
      */
-    public $uses = array('Pipeline', 'Stage', 'User', 'Label', 'LabelDeal', 'Deal', 'Contact', 'Task', 'UserDeal', 'ProductDeal', 'Custom', 'CustomDeal', 'AppFile', 'NoteDeal', 'Source', 'Product', 'Discussion', 'ContactDeal', 'Announcement');
+    public $uses = array('Pipeline', 'Stage', 'Company', 'User', 'Label', 'LabelDeal', 'Deal', 'Contact', 'Task', 'UserDeal', 'ProductDeal', 'Custom', 'CustomDeal', 'AppFile', 'NoteDeal', 'Source', 'Product', 'Discussion', 'ContactDeal', 'Announcement');
 
     /**
      * This controller uses following helpers
@@ -96,6 +96,7 @@ class AdminsController extends AppController
                 $row['Labels'] = $this->LabelDeal->getLabelDeal($row['Deal']['id']);
                 $row['Users'] = $this->UserDeal->getUsersDeal($row['Deal']['id']);
                 $row['tasks'] = $this->Task->find('count', array('conditions' => array('Task.deal_id' => $row['Deal']['id'])));
+                $row['Company'] = $this->Company->getCompanyById($row['Deal']['company_id'])['Company'];
                 $row['tasks_u'] = $this->Task->find('count', array('conditions' => array('Task.deal_id' => $row['Deal']['id'], 'Task.status' => 0)));
                 $row['files'] = $this->AppFile->find('count', array('conditions' => array('AppFile.deal_id' => $row['Deal']['id'])));
                 $row['contacts'] = $this->ContactDeal->find('count', array('conditions' => array('ContactDeal.deal_id' => $row['Deal']['id'])));

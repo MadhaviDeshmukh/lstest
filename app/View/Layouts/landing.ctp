@@ -26,6 +26,8 @@
         <title><?php echo $this->Session->read('Company.name'); ?></title>
         <!-- Favicon -->
         <link type="image/x-icon" href="<?php echo $this->webroot; ?>img/favicon.gif" rel="shortcut icon"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
         <!-- Theme Style -->
         <?php
         echo $this->Html->css('landing/css/font-awesome.min.css?' . rand);
@@ -83,7 +85,7 @@
     <!-- HEADER AREA START -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="background: #F2F2F2!important">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="/img/LastStepLogo.png"/></a>
+            <a class="navbar-brand" href="index.html"><img src="/img/LastStepLogo_bkup.png"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
@@ -106,9 +108,9 @@
     <section id="banner">
         <div class="container">
             <div class="row" style="padding: 50px 0">
-                <div class="col-lg-12 banner-text">
+                <div class="col-lg-6 banner-text">
                     <h4 class="tagline">Last Step in your job search </h4>
-                    <h4 class="desh">You've spent months preparing for inteviews and searching for jobs. Last Step helps you with the tracking of your job application. </h4>
+                    <h4 class="desh">Take back control of your job search and stay on top of every job application. </h4>
                     <p></p>
                     <!--<form>
                         <input type="email" class="version2" placeholder="Enter your email">
@@ -152,21 +154,73 @@ function onSignIn(googleUser) {
 </script>
 <!--<a href="#" onclick="signOut();">Sign out</a>-->
                 </div>
-              <!--  <div class="col-lg-6 col-sm-9 col-md-8 m-sm-auto m-md-auto">
+                <div class="col-lg-6 col-sm-9 col-md-8 m-sm-auto m-md-auto">
                     <div class="row xm_top_pa">
                         <div class="col-lg-9 m-auto">
-                            <div class="banner-img">
-                                <img src="https://i.imgur.com/HZPI9JW.png" alt="banner-img" class="img-fluid">
+			    <div class="banner-img">
+                                <figure>
+                                  <div id="compare"></div>
+                                </figure>
+                                <input oninput="beforeAfter()" onchange="beforeAfter()" type="range" min="0" max="100" value="50" id="slider"/>
+                                <!--<img src="https://i.imgur.com/HZPI9JW.png" alt="banner-img" class="img-fluid">-->
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </section>
     <!-- BANNER AREA END -->
 
     <!-- FEATURE AREA START -->
+<section id="feature" style="background: #f2f2f2">
+        <div class="container">
+            <!--<div class="row">
+                <div class="col-lg-12 text-center overview-heading">
+                    <h3>Everything you need to track your application Fea<span>ture</span></h3>
+                    <p>Everything you need for the last step of your job application.</p>
+                </div>
+            </div>-->
+            <div class="row pa-top">
+                <div class="col-lg-7">
+                    <div class="col-lg-6 col-md-6 ml-auto go-bottom text-center">
+                        <div class="fea-item">
+                            <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                            <img src="https://i.imgur.com/wFME75Y.png" alt="banner-img" class="img-fluid" style="padding: 15px 0px">
+                            <h4 style="padding: 0px 10px">Track your applications, start to finish</h4>
+                            <p style="padding: 0px 10px">Single page view of all the stages of your application. Easily move between stages.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 text-center">
+                        <div class="fea-item">
+                            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                            <img src="https://i.imgur.com/yrbQs7a.png" alt="feature-img" class="img-fluid" style="padding: 15px 0px">
+                            <h4>Keep your resume next to your job</h4>
+                            <p>Keep track of all the versions of your resume and cover letters per job.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 ml-auto go-top text-center">
+                        <div class="fea-item">
+                            <i class="fa fa-desktop" aria-hidden="true"></i>
+                            <img src="https://i.imgur.com/3atBSBQ.png" alt="feature-img" class="img-fluid" style="padding: 15px 0px">
+                            <h4>Track tasks and add notes</h4>
+                            <p style="padding: 0px 10px">Get Things Done by creating tasks and maintaining a journal for each job.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 feature-text" style="padding-top: 300px">
+                    <span class="add-new">Best of all</span>
+                    <h3>This is the best feature</h3>
+                    <h4>That will blow your mind!</h4>
+                    <p class="p-b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nobis accusamus nihil nostrum ad iste laboriosam pariatur</p>
+                    <p class="p-b p-b-b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nobis accusamus</p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<?php /*
     <section id="feature" style="background: #F2F2F2">
         <div class="container">
            <!-- <div class="row">
@@ -246,8 +300,68 @@ function onSignIn(googleUser) {
                 </div>
             </div>-->
         </div>
-    </section>
+	</section>
+ */ ?>
     <!-- FEATURE AREA END -->
+<footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-logo">
+                        <a class="f-logo" href="#banner"><b>LastStep</b></a>
+                        <p>Everything you need to cross the last step of your job search.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="links">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">overview</a></li>
+                            <li><a href="#">feature</a></li>
+                            <li><a href="#">Review</a></li>
+                            <li><a href="#">Sign up</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="location links">
+                        <h3>Location</h3>
+                        <p><a href="#">San Carlos, CA, USA</a></p>
+                        <h3>Email</h3>
+                        <p>
+                            <a href="#">founders@laststep.co</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="links pb-2 insta">
+                        <h3>Gallery</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-6 col-sm-4 col-md-2 extra3">
+                            <img src="images/in1.jpg" alt="instagram" class="img-fluid w-100">
+                        </div>
+                        <div class="col-lg-4 col-6 col-sm-4 col-md-2 extra3">
+                            <img src="images/in2.jpg" alt="instagram" class="img-fluid w-100">
+                        </div>
+                        <div class="col-lg-4 col-6 col-sm-4 col-md-2 extra3">
+                            <img src="images/in3.jpg" alt="instagram" class="img-fluid w-100">
+                        </div>
+                        <div class="col-lg-4 col-6 col-sm-4 col-md-2">
+                            <img src="images/in4.jpg" alt="instagram" class="img-fluid w-100">
+                        </div>
+                        <div class="col-lg-4 col-6 col-sm-4 col-md-2">
+                            <img src="images/in6.jpg" alt="instagram" class="img-fluid w-100">
+                        </div>
+                        <div class="col-lg-4 col-6 col-sm-4 col-md-2">
+                            <img src="images/in5.jpg" alt="instagram" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- COPY_RIGHT AREA START -->
     <section id="footer-btm" style="background: #343533">
@@ -284,7 +398,12 @@ function onSignIn(googleUser) {
         echo $this->Html->script('landing/js/slick.min.js?' . rand);
         echo $this->Html->script('landing/js/venobox.min.js?' . rand);
         echo $this->Html->script('landing/js/custom.js?' . rand);
-	?>
+?>
+	<script>
+	function beforeAfter() {
+  document.getElementById('compare').style.width = document.getElementById('slider').value + "%";
+}
+</script>
 </body>
 
 </html>

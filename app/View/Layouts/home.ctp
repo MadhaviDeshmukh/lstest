@@ -84,37 +84,25 @@
                         <?php echo $this->Form->input('base_url', array('type' => 'hidden', 'value' => $this->webroot)); ?>
                         <?php echo $content_for_layout; ?> 
                         <!-- Footer Section -->
-                      <footer class="row" id="footer-bar" >                          
-    <!-- COPY_RIGHT AREA START -->
-    <section id="footer-btm" style="background: #343533">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 moja-loss">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="fop-btm">
-                                <h2>Copyright &copy; 2020. All rights reserved by <a href="#">Last Step</a></h2>
+                      <section class="row2" id="footer-bar" style="background: #343533">                          
+			    <div class="col-xs-12" id="footer-copyright"> 
+                                <div class="col-xs-6">
+                                    <div class="fop-btm">
+                                        <p>Copyright &copy; 2020. All rights reserved by <a href="#">Last Step</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <div class="footer-social newfs">
+                                        <a href="/about">About</a>
+                                        <a href="/terms">Terms and Conditions</a>
+                                        <a href="/privacy">Privacy Policy</a>
+                                        <a href="/cookies">Cookie Policy</a>
+                                        <a href="/contactus">Contact</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 text-center">
-                            <div class="footer-social newfs">
-                                <a href="/about">About</a>
-                                <a href="/terms">Terms and Conditions</a>
-                                <a href="/privacy">Privacy Policy</a>
-                                <a href="/cookies">Cookie Policy</a>
-                                <a href="/contactus">Contact</a>
-                            </div>
-                        </div>
+                        </section>
                     </div>
-                </div>
-            </div>
-        </div>
-			    <p class="col-xs-12" id="footer-copyright"> 
-                            </p>
-                        </footer>
-                        <!-- End Footer Section -->
-                    </div>
-                    <!-- End Main Content -->
                 </div>
             </div>
         </div>	

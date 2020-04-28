@@ -142,6 +142,10 @@ $(document).ready(function () {
             }
         });
     });
+$('#uDealM').on('hide.bs.modal', function () {
+    tinyMCE.editors=[];
+    tinymce.remove('#uDealM textarea');
+});
     $('#uDealSM').on('show.bs.modal', function (e) {
         var dealId = $(e.relatedTarget).attr('data-id');
         var action = $(e.relatedTarget).attr('data-name');
@@ -291,6 +295,10 @@ $('#dealM').on('show.bs.modal', function (e) {
             $('#dealM .modal-body').html(data);
         }
     });
+});
+$('#dealM').on('hide.bs.modal', function () {
+    tinyMCE.editors=[];
+    tinymce.remove('#dealM textarea');
 });
 $(document).on("click", '.an-alert .close', function (e) {
     var id = $(this).attr("data-id");

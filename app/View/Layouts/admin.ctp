@@ -80,9 +80,23 @@
                         <?php echo $content_for_layout; ?> 
                         <!-- End Main Content -->
                         <!-- Footer Section -->
-                        <footer class="row" id="footer-bar">
-                            <p class="col-xs-12" id="footer-copyright">
-                            </p>
+                        <footer class="row" id="footer-bar" style="background: #343533">
+			    <div class="col-xs-12" id="footer-copyright"> 
+                                <div class="col-xs-6">
+                                    <div class="fop-btm">
+                                        <p>Copyright &copy; 2020. All rights reserved by <a href="#">Last Step</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <div class="footer-social newfs">
+                                        <a href="/about">About</a>
+                                        <a href="/terms">Terms and Conditions</a>
+                                        <a href="/privacy">Privacy Policy</a>
+                                        <a href="/cookies">Cookie Policy</a>
+                                        <a href="/contactus">Contact</a>
+                                    </div>
+                                </div>
+                            </div>
                         </footer>
                         <!-- End Footer Section -->
                     </div>

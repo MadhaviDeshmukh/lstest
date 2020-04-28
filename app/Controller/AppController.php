@@ -48,7 +48,7 @@ class AppController extends Controller
     {
         //allow functions access without login
         //$this->Auth->allow('login', 'forgotPassword', 'landingPage');
-        $this->Auth->allow('login', 'logingoogle', 'forgotPassword', 'landingPage', 'termsPage', 'aboutPage');
+        $this->Auth->allow('login', 'logingoogle', 'forgotPassword', 'landingPage', 'termsPage', 'aboutPage','privacyPage','cookiesPage','contactusPage');
         //set appliction time zone
         Configure::write('Config.timezone', $this->Session->read('Auth.User.timezone'));
         Configure::write('Config.language', $this->Session->read('Auth.User.language'));

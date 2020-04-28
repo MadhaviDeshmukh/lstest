@@ -278,19 +278,19 @@
                                 <div class="row">
 
                                     <div class="input-group col-md-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
+                                <div class="panel panel-default" style="border: 0px !important">
+                                    <!--<div class="panel-heading">
                                         <i class="fa fa-sticky-note"></i> <?php echo __('Notes'); ?>
-                                    </div>
-                                    <div class="panel-body">
+                                    </div>-->
+                                    <div class="panel-body2">
                                         <?php echo $this->Form->create('Note', array('url' => array('controller' => 'Notes', 'action' => 'inlineedit'), 'class' => 'vForm1')); ?>
                                         <?php echo $this->Form->input('NoteDeal.deal_id', array('type' => 'hidden', 'value' => h($deal['Deal']['id']))); ?>
                                         <?php echo $this->Form->input('NoteDeal.id', array('type' => 'hidden', 'value' => (isset($note['NoteDeal']['id'])) ? h($note['NoteDeal']['id']) : '')); ?>
                                         <div class="input-group col-md-12">
-                                            <button class="btn btn-success btn-sm pull-right" type="submit"><i class="fa fa-check-circle"></i> <?php echo __('Save'); ?></button>
+                                            <?php echo $this->Form->input('NoteDeal.note', array('type' => 'textarea', 'class' => 'notebook', 'label' => false, 'div' => false, 'value' => (isset($note['NoteDeal']['note'])) ? html_entity_decode(h($note['NoteDeal']['note'])) : '')); ?>
                                         </div>
                                         <div class="input-group col-md-12">
-                                            <?php echo $this->Form->input('NoteDeal.note', array('type' => 'textarea', 'class' => 'notebook', 'label' => false, 'div' => false, 'value' => (isset($note['NoteDeal']['note'])) ? h($note['NoteDeal']['note']) : '')); ?>
+                                            <button class="btn btn-success btn-sm pull-right" style="margin: 10px 5px" type="submit"><i class="fa fa-check-circle"></i> <?php echo __('Save'); ?></button>
                                         </div>
 
                                         <?php echo $this->Form->end(); ?>
@@ -455,4 +455,145 @@ var first = new Dropzone("#my-dropzone", {
         location.reload();
     }
 };*/
+  tinymce.init({
+      selector: '#NoteDealNote',
+      height: 350,
+      plugins: 'preview powerpaste casechange searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen link table charmap hr pagebreak nonbreaking anchor insertdatetime advlist lists checklist tinymcespellchecker textpattern noneditable formatpainter charmap linkchecker emoticons advtable',
+      paste_webkit_styles: "none",
+      menu: {
+        },
+		menubar: 'edit format insert tools table',
+  toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment | basicDateButton selectiveDateButton toggleDateButton splitDateButton menuDateButton',
+  setup: function (editor) {
+
+    /* Helper functions */
+    var toDateHtml = function (date) {
+      return '<time datetime="' + date.toString() + '">' + date.toDateString() + '</time>';
+    };
+    var toGmtHtml = function (date) {
+      return '<time datetime="' + date.toString() + '">' + date.toGMTString() + '</time>';
+    };
+    var toIsoHtml = function (date) {
+      return '<time datetime="' + date.toString() + '">' + date.toISOString() + '</time>';
+    };
+
+    /* Basic button that just inserts the date */
+    editor.ui.registry.addButton('basicDateButton', {
+      text: 'Insert Date',
+      tooltip: 'Insert Current Date',
+      onAction: function (_) {
+        editor.insertContent(toDateHtml(new Date()));
+      }
+    });
+
+    /* Basic button that inserts the date, but only if the cursor isn't currently in a "time" element */
+    editor.ui.registry.addButton('selectiveDateButton', {
+      icon: 'insert-time',
+      tooltip: 'Insert Current Date & Time',
+      disabled: true,
+      onAction: function (_) {
+        editor.insertContent(toDateHtml(new Date()));
+      },
+      onSetup: function (buttonApi) {
+        var editorEventCallback = function (eventApi) {
+          buttonApi.setDisabled(eventApi.element.nodeName.toLowerCase() === 'time');
+        };
+        editor.on('NodeChange', editorEventCallback);
+        return function (buttonApi) {
+          editor.off('NodeChange', editorEventCallback);
+        }
+      }
+    });
+
+    /* Toggle button that inserts the date, but becomes inactive when the cursor is in a "time" element */
+    /* so you can't insert a "time" element inside another one. Also gives visual feedback. */
+    editor.ui.registry.addToggleButton('toggleDateButton', {
+      icon: 'insert-time',
+      tooltip: 'Insert Current Date',
+      onAction: function (_) {
+        editor.insertContent(toDateHtml(new Date()));
+      },
+      onSetup: function (buttonApi) {
+        var editorEventCallback = function (eventApi) {
+          buttonApi.setActive(eventApi.element.nodeName.toLowerCase() === 'time');
+        };
+        editor.on('NodeChange', editorEventCallback);
+        return function (buttonApi) {
+          editor.off('NodeChange', editorEventCallback);
+        }
+      }
+    });
+
+    /* Split button that lists 3 formats, and inserts the date in the selected format when clicked */
+    editor.ui.registry.addSplitButton('splitDateButton', {
+      text: 'Insert Date',
+      onAction: function (_) {
+        editor.insertContent('<p>Its Friday!</p>')
+      },
+      onItemAction: function (buttonApi, value) {
+        editor.insertContent(value);
+      },
+      fetch: function (callback) {
+        var items = [
+          {
+            type: 'choiceitem',
+            text: 'Insert Date',
+            value: toDateHtml(new Date())
+          },
+          {
+            type: 'choiceitem',
+            text: 'Insert GMT Date',
+            value: toGmtHtml(new Date())
+          },
+          {
+            type: 'choiceitem',
+            text: 'Insert ISO Date',
+            value: toIsoHtml(new Date())
+          }
+        ];
+        callback(items);
+      }
+    });
+
+    /* Menu button that has a simple "insert date" menu item, and a submenu containing other formats. */
+    /* Clicking the first menu item or one of the submenu items inserts the date in the selected format. */
+    editor.ui.registry.addMenuButton('menuDateButton', {
+      text: 'Date',
+      fetch: function (callback) {
+        var items = [
+          {
+            type: 'menuitem',
+            text: 'Insert Date',
+            onAction: function (_) {
+              editor.insertContent(toDateHtml(new Date()));
+            }
+          },
+          {
+            type: 'nestedmenuitem',
+            text: 'Other formats',
+            getSubmenuItems: function () {
+              return [
+                {
+                  type: 'menuitem',
+                  text: 'GMT',
+                  onAction: function (_) {
+                    editor.insertContent(toGmtHtml(new Date()));
+                  }
+                },
+                {
+                  type: 'menuitem',
+                  text: 'ISO',
+                  onAction: function (_) {
+                    editor.insertContent(toIsoHtml(new Date()));
+                  }
+                }
+              ];
+            }
+          }
+        ];
+        callback(items);
+      }
+    });
+  }
+  });
 </script>

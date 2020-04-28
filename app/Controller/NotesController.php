@@ -82,11 +82,11 @@ class NotesController extends AppController
             //redirect to deal view
             if ($this->checkClient()):
                 return $this->redirect(
-                        array('controller' => 'Deals', 'action' => 'cview', $dealId)
+                        array('controller' => 'Jobs', 'action' => 'cview', $dealId)
                 );
             else:
                 return $this->redirect(
-                        array('controller' => 'Deals', 'action' => 'view', $dealId)
+                        array('controller' => 'Jobs', 'action' => 'view', $dealId)
                 );
             endif;
         }

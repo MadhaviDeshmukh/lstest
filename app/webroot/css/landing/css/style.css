@@ -374,6 +374,7 @@ img {
 .navbar-light .navbar-nav .nav-link {
     color: #131313;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
@@ -389,6 +390,7 @@ img {
 .navbar-light .navbar-brand {
     color: #363535;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     font-size: 28px;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
@@ -441,6 +443,7 @@ img {
 .banner-text h3 {
     font-size: 42px;
     font-family: gr;
+    font-family: "Open Sans", sans-serif;
     padding-bottom: 3px;
     color: #3c3c3c;
 }
@@ -458,6 +461,7 @@ img {
     padding-bottom: 4px;
     font-size: 36px;
     font-family: gr;
+    font-family: "Open Sans", sans-serif;
     padding-top: 1px;
     color: #3c3c3c;
 }
@@ -467,8 +471,9 @@ img {
     padding-bottom: 16px !important;
     font-size: 56px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     color: #3c3c3c;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .tagline:after {
@@ -487,6 +492,7 @@ img {
     padding-bottom: 16px !important;
     font-size: 28px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     color: #3c3c3c;
 }
 
@@ -504,6 +510,7 @@ img {
 .banner-text p {
     font-size: 16px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     line-height: 26px;
     color: #666;
     padding-top: 6px;
@@ -514,6 +521,7 @@ img {
 .mix-a {
     font-size: 16px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     color: white;
     padding: 14px 20px;
     background: #ff7657;
@@ -614,6 +622,7 @@ img {
 .overview-heading h3 {
     font-size: 32px;
     font-family: gr;
+    font-family: "Open Sans", sans-serif;
     color: #262626;
 }
 
@@ -760,6 +769,7 @@ img {
     font-size: 20px;
     color: #131313;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
 }
 
 .overview-item p {
@@ -767,6 +777,7 @@ img {
     line-height: 27px;
     padding: 0 33px;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
 }
 
 .backtotop {
@@ -819,10 +830,12 @@ img {
     color: #F5CB5B;
     font-size: 16px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
 }
 
 .about-text h3 {
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     font-size: 26px;
     padding-top: 9px;
     padding-bottom: 5px;
@@ -833,6 +846,7 @@ img {
     padding-right: 32px;
     line-height: 27px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
 }
 
 .about-padd {
@@ -844,6 +858,7 @@ img {
     color: #F5CB5B;
     font-size: 16px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     padding: 14px 20px;
     background: #fff;
     border: 1px solid #ff7657;
@@ -882,6 +897,7 @@ img {
     -o-transition: all linear .3s;
     transition: all linear .3s;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
 }
 
 .feature-text a:hover {
@@ -894,6 +910,7 @@ img {
     font-size: 27px;
     color: #363535;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     padding: 5px 0 1px;
 }
 
@@ -902,6 +919,7 @@ img {
     color: #ff7657;
     color: #F5CB5B;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     padding-bottom: 30px;
     position: relative;
 }
@@ -923,6 +941,7 @@ img {
     line-height: 26px;
     padding-left: 61px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
 }
 
 .p-b-b {
@@ -930,7 +949,7 @@ img {
 }
 
 .fea-item {
-    padding: 25px 25px;
+    padding: 15px 0px;
     -webkit-box-shadow: 0 0 10px 5px rgba(203, 202, 202, 0.2);
     box-shadow: 0 0 10px 5px rgba(203, 202, 202, 0.2);
     background: white;
@@ -948,6 +967,7 @@ img {
     font-size: 21px;
     color: #272727;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     padding-top: 20px;
 }
 
@@ -1007,6 +1027,7 @@ img {
 .feature-text2 h3 {
     font-size: 21px;
     font-family: kb;
+    font-family: "Open Sans", sans-serif;
     text-align: right;
 }
 
@@ -1018,6 +1039,7 @@ img {
     color: #666;
     font-size: 16px;
     font-family: kr;
+    font-family: "Open Sans", sans-serif;
     line-height: 26px;
     text-align: right;
 }
@@ -1038,6 +1060,7 @@ img {
 .f-item span {
     font-size: 56px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     color: #ffab98;
     color: #F5CB5B;
 }
@@ -1045,6 +1068,7 @@ img {
 .f-item h3 {
     font-size: 23px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     color: #363535;
     position: relative;
     padding-bottom: 18px;
@@ -1064,6 +1088,7 @@ img {
 .f-item p {
     font-size: 16px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     color: #666;
     line-height: 27px;
     padding-top: 3px;
@@ -1072,6 +1097,7 @@ img {
 .f-item a {
     font-size: 16px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     color: #ff7657;
 }
 
@@ -1108,6 +1134,7 @@ img {
 
 .count-item h4 {
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     font-size: 40px;
 }
 
@@ -1131,6 +1158,7 @@ img {
     font-size: 19px;
     color: #585858;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
 }
 
 /*===========================
@@ -1150,12 +1178,14 @@ img {
     font-size: 23px;
     color: #363535;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
 }
 
 .price-item h3 b {
     font-size: 23px;
     color: #ff7657;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
 }
 
 .price-item i {
@@ -1168,6 +1198,7 @@ img {
 .price-item span {
     font-size: 17px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     color: #ff7657;
 }
 
@@ -1175,6 +1206,7 @@ img {
     font-size: 16px;
     color: #666;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
 }
 
 .br {
@@ -1192,6 +1224,7 @@ img {
     color: #ff7657;
     font-size: 16px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
     transition: all linear .3s;
@@ -1332,6 +1365,7 @@ img {
     padding: 20px 95px 0;
     line-height: 27px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     color: #666;
 }
 
@@ -1373,11 +1407,13 @@ img {
 
 .testimonial-item h3 {
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     font-size: 25px;
 }
 
 .testimonial-item span {
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #fa573a;
 }
@@ -1499,6 +1535,7 @@ img {
     -o-transition: all linear .4s;
     transition: all linear .4s;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
 }
 
 .seo-in:hover {
@@ -1512,6 +1549,7 @@ img {
     border: 1px solid #ff7657;
     border-radius: 50px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     font-size: 19px;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
@@ -1541,6 +1579,7 @@ img {
 
 .news-text h4 {
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     padding-top: 15px;
 }
 
@@ -1548,6 +1587,7 @@ img {
     color: #ff7657;
     font-size: 16px;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     padding-bottom: 5px;
 }
 
@@ -1555,6 +1595,7 @@ img {
     color: #666;
     font-size: 16px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
     padding-bottom: 4px;
     padding-top: 9px;
     line-height: 26px;
@@ -1563,6 +1604,7 @@ img {
 .news-text a {
     color: #ff7657;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
@@ -1601,6 +1643,7 @@ img {
     color: white;
     font-size: 21px;
     font-family: gr;
+    font-family: "Open Sans", sans-serif;
 }
 
 .news-items {
@@ -1696,10 +1739,12 @@ img {
     height: 55px;
     border-left: none;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
 }
 
 .form-control {
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
 }
 
 .form-control:focus {
@@ -1712,6 +1757,7 @@ img {
     padding: 14px 55px;
     border: 1px solid #ff7657;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     font-size: 20px;
     background: #ff7657;
     color: white;
@@ -1746,6 +1792,7 @@ img {
     line-height: 26px;
     font-size: 15px;
     font-family: rl;
+    font-family: "Open Sans", sans-serif;
 }
 
 .footer-social {
@@ -1773,6 +1820,7 @@ img {
 .links h3 {
     font-size: 19px;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     color: #363535;
     font-weight: 600;
     text-transform: capitalize;
@@ -1785,6 +1833,7 @@ img {
     line-height: 38px;
     font-size: 15px;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
     transition: all linear .3s;
@@ -1804,6 +1853,7 @@ img {
     font-size: 15px;
     line-height: 25px;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
 }
 
 
@@ -1811,6 +1861,7 @@ img {
     font-size: 25px;
     color: #363535;
     font-family: rb;
+    font-family: "Open Sans", sans-serif;
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
     transition: all linear .3s;
@@ -1891,6 +1942,7 @@ img {
     font-size: 16px;
     padding-top: 5px;
     font-family: rr;
+    font-family: "Open Sans", sans-serif;
 }
 
 .moja-loss {
@@ -1930,4 +1982,115 @@ img {
     -webkit-transition: all linear .3s;
     -o-transition: all linear .3s;
     transition: all linear .3s;
+}
+
+.banner-img {
+	height: 33.5vw;
+	margin: 1vw auto;
+	max-height: 750px;
+	max-width: 1000px;
+	overflow: hidden;
+	width: 38vw;
+}
+.banner-img figure {
+	/*background-image: url(https://www.makerteam.xyz/img/before-after/1st.jpg);*/
+	background-image: url(/img/Image1.png);
+	background-size: cover;
+	font-size: 0;
+	height: 100%;
+	margin: 0;
+	position: relative;
+	width: 100%;
+}
+#compare {
+	/*background-image: url(https://www.makerteam.xyz/img/before-after/2nd.jpg);*/
+	background-image: url(/img/Image2.png);
+	background-size: cover;
+	bottom: 0;
+	border-right: 5px solid rgba(255,255,255,0.7);
+	box-shadow: 10px 0 15px -13px #000;
+	height: 100%;
+	max-width: 98.6%;
+	min-width: 0.6%;
+	overflow: visible;
+	position: absolute;
+	width: 50%;
+	animation: first 2s 1 normal ease-in-out 0.1s;
+	-webkit-animation: first 2s 1 normal ease-in-out 0.1s;
+}
+input#slider {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	background: transparent;
+	cursor: col-resize;
+	height: 100vw;
+	left: 0;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	position: relative;
+	top: -100vw;
+	width: 100%;
+}
+input#slider::-moz-range-track {
+	background: transparent;
+}
+input#slider::-ms-track {
+	border: none;
+	background-color: transparent;
+	height: 100vw;
+	left: 0;
+	outline: none;
+	position: relative;
+	top: -100vw;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	cursor: col-resize;
+	color:transparent;
+}
+input#slider::-ms-fill-lower {
+	background-color:transparent;
+}
+input#slider::-webkit-slider-thumb {
+	-webkit-appearance:none;
+	height: 100vw;
+	width: 0.5%;
+	opacity: 0;
+}
+input#slider::-moz-range-thumb {
+	-moz-appearance: none;
+	height: 100vw;
+	width: 0.5%;
+	opacity: 0;
+}
+input#slider::-ms-thumb {
+	height: 100vw;
+	width: 0.5%;
+	opacity:0;
+}
+input#slider::-ms-tooltip {
+	display:none;
+}
+#compare::before {
+	background: url(https://webdevtrick.com/wp-content/uploads/comparision.png) no-repeat scroll 0 center transparent;
+	background-size:contain;
+	content: " ";
+	float: right;
+	height: 100%;
+	margin-right: -34px;
+	position: relative;
+	top:0;
+	width: 64px;
+}
+@keyframes first {
+  0% {width: 0%; }
+  50% {width: 80%; }
+  100% {width: 50%; }
+}
+@-webkit-keyframes first {
+  0% {width: 0%; }
+  50% {width: 80%; }
+  100% {width: 50%; }
 }

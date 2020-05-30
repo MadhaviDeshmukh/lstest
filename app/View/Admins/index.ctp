@@ -34,7 +34,7 @@
                 <h4 class="modal-title"></h4>
             </div>
             <div class="modal-body">
-                <div class="row deal-popup" id="mBody">                    
+                <div class="row job-popup" id="mBody">                    
                 </div>
             </div>
             <div class="modal-footer">
@@ -242,31 +242,31 @@
 						<?php //print_r($row); ?>
                                             <!--Deal Box-->
                                             <li class="ui-state-default" id="<?= h($row['Deal']['id']); ?>">
-                                                <!--<div class="deal-labels">
+                                                <div class="job-labels">
                                                     <?php foreach ($row['Labels'] as $label): ?>
-                                                        <div class="deal-label <?= h($label['Label']['color']); ?>"  ref='popover' data-content='<?= h($label['Label']['name']); ?>'></div>
+                                                        <div class="job-label <?= h($label['Label']['color']); ?>"  ref='popover' data-content='<?= h($label['Label']['name']); ?>'></div>
                                                     <?php endforeach; ?>
-                                                </div>-->
-                                                <div class="deal-name ellipsis">
+                                                </div>
+                                                <div class="job-name ellipsis">
                                                     <!--<i class="fa fa-eye hidden"></i> <?php echo $this->Html->link(h(substr($row['Deal']['name'],0,28).' ...'), array('controller' => 'jobs', 'action' => 'view', h($row['Deal']['id'])), array('escape' => false, 'ref' => 'popover', 'data-content' => h($row['Deal']['name']))); ?>-->
                                                     <i class="fa fa-eye hidden"></i> <?php echo $this->Html->link(h($row['Deal']['name']), array('controller' => 'jobs', 'action' => 'view', h($row['Deal']['id'])), array('escape' => false, 'ref' => 'popover', 'data-content' => h($row['Deal']['name']))); ?>
-                                                    <!--<span class="pull-right dv-label" data-target="#uDealSM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="Labels" ref = 'popover' data-content ='Labels'>
+                                                    <span class="pull-right dv-label" data-target="#uDealSM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="Labels" ref = 'popover' data-content ='Labels'>
                                                         <i class="fa fa-tag hidden"></i>
-                                                    </span>-->
+                                                    </span>
                                                 </div>                                            
-                                                <div class="deal-company">
-						    <span> <?= h($row['Company']['name']); ?></span>
+                                                <div class="job-company">
+						    <span> <?= h($row['Company']['name']); ?>&nbsp;</span>
                                                 </div>
-                                                <div class="deal-module">
-                                                    <span> <?= h($row['files']); ?> <?php echo __('Files'); ?></span>
+                                                <div class="job-module">
+                                                    <span> <?= h($row['files']); ?> <i class="fa fa-paperclip"></i></span>
                                                     <!--<span class="text-center"><?= h($row['tasks_u']) . '/' . h($row['tasks']); ?> <?php echo __('Tasks'); ?></span> -->
-                                                    <span class="text-left"><?= h($row['tasks_u']); ?> <?php echo __('Tasks'); ?></span> 
-                                                    <span class="text-left"><?= h($row['contacts']); ?> <?php echo __('Contacts'); ?></span>
+                                                    <span class="text-left"><?= h($row['tasks_u']); ?> <i class="fa fa-check"></i></span> 
+                                                    <span class="text-left"><?= h($row['contacts']); ?> <i class="fa fa-user-md"></i></span>
                                                     <!--<span class="text-right view-modal" data-target="#uDealM" data-toggle="modal" data-id="<?= h($row['Deal']['id']); ?>" data-name="view" data-deal="<?= h($row['Deal']['name']); ?>" ref = 'popover' data-content ='Edit Job'>
                                                         <i class="fa fa-edit"></i>
                                                     </span>                                                                                           -->
                                                 </div>
-                                                <div class="deal-links">
+                                                <div class="job-links">
                                                     <span class="text-right">
 						    <?php if($row['Deal']['status'] == 1) { ?>
 							<a class="star-job" href="<?= '/jobs/active/' . h($row['Deal']['id']); ?>" data-name="view" ref = 'popover' data-content ='Unfavorite Job'>
@@ -288,7 +288,7 @@
                                                         </a>
                                                     </span>
                                                 </div>
-						<div class="deal-footer">
+						<div class="job-footer">
                                                     <span>&nbsp;</span>
                                                     <?php /* disabling user avatar
                                                     if (!empty($row['Users'])) :

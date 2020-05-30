@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]>
+<html lang="en-us" class="ie6">
+   <![endif]-->
+<!--[if IE 7 ]>
+<html lang="en-us" class="ie7">
+   <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en-us" class="ie8">
+   <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Deals Manager 2</title>
+        <meta content="" name="description">
+        <meta content="AnkkSoft" name="author">
+        <meta content="AnkkSoft" name="copyright">
+        <link href="assets/images/favicon.gif" rel="shortcut icon">
+        <link href="assets/css/documenter_style.css" media="all" rel="stylesheet">
+        <link href="assets/css/style.css" media="all" rel="stylesheet">
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/jquery.scrollTo.js"></script>
+        <script src="assets/js/jquery.easing.js"></script>
+        <script>
+            document.createElement('section');
+            var duration = '598',
+                    easing = 'swing';
+        </script>
+        <script src="assets/js/script.js"></script>
+    </head>
+    <body class="documenter-project">
+        <div id="documenter_sidebar"> <a href="#documenter_cover" id="documenter_logo"><img src="assets/images/logo.png" alt="Deals Manager"></a>
+            <ul id="documenter_nav">
+                <li><a href="#documenter_cover">Introduction</a></li>
+                <li><a href="#installation_guide" title="Installation Guide">Installation Guide</a></li>
+                <li><a href="#pipelines" title="Pipelines">Pipelines</a></li>
+                <li><a href="#stages" title="Stages">Stages</a></li>
+                <li><a href="#users" title="Members">Members</a></li>
+                <li><a href="#dashboard" title="Dashboard">Dashboard</a></li>
+                <li><a href="#deals" title="Deals">Deal</a></li>
+                <li><a href="#company" title="Company">Clients</a></li>              
+                <li><a href="#tasks" title="Tasks">Tasks</a></li>               
+                <li><a href="#labels" title="Labels">Labels</a></li>
+                <li><a href="#sales" title="Sales">Sales</a></li>
+                <li><a href="#contacts" title="Contacts">Contacts</a></li>
+                <li><a href="#products" title="Products">Products</a></li>
+                <li><a href="#sources" title="Sources">Sources</a></li>
+                <li><a href="#activity" title="Activity">Activity</a></li>
+                <li><a href="#reports" title="Reports">Reports</a></li>
+                <li><a href="#message" title="Message">Messaging</a></li>
+                <li><a href="#export" title="Export">Export</a></li>
+                <li><a href="#tickets" title="Support Tickets">Support Tickets</a></li>
+                <li><a href="#customs" title="Custom Fields">Custom Fields</a></li>
+                <li><a href="#settings" title="Settings">Settings</a></li>               
+            </ul>
+            <div id="documenter_copyright"><a href="https://www.ankksoft.com">Copyright AnkkSoft.Com 2019</a><br>
+                made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> </div>
+        </div>
+        <div id="documenter_content">
+            <section id="documenter_cover">
+                <h1>Deals Manager 2</h1>
+                <hr>
+                <h4>Documentation Info</h4>
+                <ul>
+                    <li>
+                        <b>Created:</b> 10 May 2019
+                    </li>
+                    <li>
+                        <b>Created by</b>: <a href="https://codecanyon.net/user/codeloop">AnkkSoft</a>
+                    </li>
+                    <li>
+                        <b>Version 2.0</b>
+                    </li>
+                    <li>
+                        <b>Website:</b> <a href="https://www.ankksoft.com/">www.ankksoft.com</a>
+                    </li>
+                </ul>
+                <p>Please note that Support and Updates are only available to customers who have genuine copies of this software.</p>
+            </section>
+            <!-- Installation Guide -->
+            <section id="installation_guide">
+                <div class="page-header">
+                    <h3>INSTALLATION GUIDE</h3>
+                    <hr class="notop">
+                </div>
+                <h4> SYSTEM REQUIREMENTS</h4>
+                <ul>
+                    <li> Apache Based PHP Server</li>
+                    <li> PHP 5.3.x</li>
+                    <li> Mysql Server</li>
+                    <li> Mod Rewrite Enabled</li>
+                    <li> .htaccess Enabled</li>                 
+                </ul>
+                <h4> UNZIP AND UPLOAD FILES VIA FTP</h4>
+                <p>Once you have downloaded your copy of the software, place it on your desktop and unzip the folder. You will now have a directory with a structure.</p>
+                <h5><img src="assets/images/folder.png" alt="folder"> </h5>
+                <p>Upload all the files into your website's FTP folder. You can use an FTP client like WS_FTP.</p>
+                <div class="info-panel">Make Sure .htaccess file exists when you moving it</div>
+                We can set up application using two ways:- <br>
+                1. Using Installation wizard.<br>
+                2. Manually Set Up<br>
+                <h4>1. START THE INSTALLATION WIZARD</h4>
+                Open your website to a url similar to the one below. You must replace the words <strong>yourdomain.com</strong> with your real domain name. Follow all the steps to complete your installation<br>
+                <br>
+                <div class="info-panel">http://www.yourdomain.com/install</div>
+                <br>
+                <h5><img src="assets/images/install.png" alt="install"></h5> 
+
+                <h4>SERVER REQUIREMENT</h4>
+                Check server requirement for application.
+                <h5><img src="assets/images/install-step2.png" alt="install server"></h5> 
+
+                <h4>DIRECTORY PERMISSION (CHMOD FOLDERS &amp; FILES)</h4>
+                The following folders must have their permissions  changed via FTP (<strong>CHMOD</strong>). <br>
+                <br>
+                This will make them writeable. Normally you simply  right click the specified file/folder on the server side of you FTP Client and  you select ‘properties’ you will then have an option to set the permission  levels that you want.  
+                <br>
+                <br>
+                <div class="info-panel">
+                    Typically for Folder you set the permission level to <strong>777</strong> or <strong>755</strong> (depending on your web host’s settings).<br> 
+                    If you have set to 777  and you find you are getting 500 SERVER ERROR then you must CHMOD back to 755.<br>  
+                    For file, the permission level needed is normally <strong>666</strong>
+                </div>
+                <br>
+                <br>
+                <div class="info-panel">
+                    <ul>
+                        <li>app/tmp</li>
+                        <li>app/tmp/cache</li>
+                        <li>app/tmp/logs</li>
+                        <li>app/webroot/files</li>                    
+                        <li>app/webroot/files/backup</li>
+                        <li>app/webroot/files/deal</li>
+                        <li>app/webroot/files/export</li>               
+                        <li>app/webroot/files/ticket</li>
+                        <li>app/webroot/files/expenses</li>
+                        <li>app/webroot/img/avatar</li>
+                        <li>app/webroot/img/contact</li>
+                        <li>app/Config/database.php</li>
+                        <li>app/Config/email.php</li>
+                    </ul>
+                </div>
+                <h5><img src="assets/images/install-step3.png" alt="install directory"></h5>                  
+                <h4>MySQL DATABASE</h4>
+                You will need a MySQL database in order to install  the application.  
+                You can easily create one via your web hosting  providers Control Panel (e.g. <strong>Cpanel</strong>). <br>
+                When you have finished created your database via  your control pane, you should now have the following information:<br>
+                <br>
+                <div class="info-panel"><ul>
+                        <li>DATABASE NAME</li>
+                        <li>DATABASE USERNAME</li>
+                        <li>DATABASE PASSWORD</li>
+                    </ul>
+                </div>
+                <h5><img src="assets/images/install-step4.png" alt="install database"></h5> 
+                <h4>FINAL</h4>
+                <h5><img src="assets/images/install-step5.png" alt="install final"></h5>                               
+                <h4>Local host Installation</h4>
+                <p>On local host you have to do some changes for application work without bug.On local host the sending of E-mails not work ,you need to mail function working for sending E-mails.On local host you can set the SMTP for sending E-mails.<p>
+                <div class="info-panel">  Goes to /app/Config/email.php and add your SMTP details. <br>
+                    Please contact us if you find any issue for set up on local host.</div>
+                <h4>LOGIN INTO YOUR DASHBOARD</h4>
+                Once you have completed your installation, you will be able to access the application as follows:
+                <div class="info-panel">
+                    Username:-  admin@admin.com  <br>
+                    Password:-  123456
+                </div>
+                <h5><img src="assets/images/login.png" alt="login"> </h5>
+                <p><br>
+                </p>
+                <h4>2. Manually Set Up</h4>
+                <p>(1) Open <strong>app/Config/database.php</strong> file and change details with your server details:-</p>
+                <div class="info-panel">
+                    'host' => 'localhost',<br>
+                    'login' => 'your_username',<br>
+                    'password' => 'your_password',<br>
+                    'database' => 'database_name',<br>
+                </div>
+                <p>(2) Use file <strong>app/install/steps/dm.sql</strong> and import in your database created.</p>
+                (3) DIRECTORY PERMISSION (CHMOD FOLDERS &amp; FILES)
+                The following folders must have their permissions  changed via FTP (<strong>CHMOD</strong>). <br>
+                <br>
+                This will make them writeable. Normally you simply  right click the specified file/folder on the server side of you FTP Client and  you select ‘properties’ you will then have an option to set the permission  levels that you want.  
+                <br>
+                <br>
+                <div class="info-panel">
+                    Typically for Folder you set the permission level to <strong>777</strong> or <strong>755</strong> (depending on your web host’s settings).<br> 
+                    If you have set to 777  and you find you are getting 500 SERVER ERROR then you must CHMOD back to 755.<br>  
+                    For file, the permission level needed is normally <strong>666</strong>
+                </div>
+                <br>
+                <br>
+                <div class="info-panel">
+                    <ul>
+                        <li>app/tmp</li>
+                        <li>app/tmp/cache</li>
+                        <li>app/tmp/logs</li>
+                        <li>app/webroot/files</li>                    
+                        <li>app/webroot/files/backup</li>
+                        <li>app/webroot/files/deal</li>
+                        <li>app/webroot/files/export</li>               
+                        <li>app/webroot/files/ticket</li>
+                        <li>app/webroot/files/expenses</li>
+                        <li>app/webroot/img/avatar</li>
+                        <li>app/webroot/img/contact</li>
+                        <li>app/Config/database.php</li>
+                        <li>app/Config/email.php</li>
+                    </ul>
+                </div>
+                (4) Once you have given permmision, you will be able to access the application as follows:
+                <div class="info-panel">
+                    Username:-  admin@admin.com  <br>
+                    Password:-  123456
+                </div>
+                <h5><img src="assets/images/login.png" alt="login"> </h5>
+                <p><br>
+            </section>
+            <!-- Pipeline Guide -->
+            <section id="pipelines">
+                <div class="page-header">
+                    <h3>Pipelines</h3>
+                    <hr class="notop">
+                </div>
+                <p>Pipeline are the base for application.The Pipeline are base where we are going to add stages and then deals. </p>  
+
+                <h4>HOW TO ADD A PIPELINE</h4>
+                <p>To add a pipeline, click on <strong>PIPELINES</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Pipeline</strong> button (as shown below). You will get a new popup window for you to fill in pipeline name. </p>
+                <h5><img src="assets/images/add-pipeline.png" alt="Pipeline" > </h5>
+
+                <h4>HOW TO EDIT A PIPELINE</h4>
+                Just click on pipeline name to edit it,change it and then click arrow for save.
+                <h5><img src="assets/images/edit-pipeline.png" alt="edit pipeline"></h5>
+                <h4>SET PIPELINE PERNISSION TO USER</h4>
+                Just click on pipeline list page permission button and you will able to set permission for view that pipeline for users.
+                <h5><img src="assets/images/pipeline-permission.png" alt="pipeline permission"></h5>
+                <h4>SET DEFAULT ACTIVE PIPELINE </h4>
+                Just go to setting , in general settings you can select default active pipeline for application.
+                <h5><img src="assets/images/pipeline-default.png" alt="pipeline active"></h5>
+
+
+                <h4>HOW TO DELETE A PIPELINE</h4>
+                Do delete a pipeline, you simply click the delete icon (<img src="assets/images/delete-icon.png" alt="delete" width="14" height="14" align="absmiddle">)
+                . When you delete a pipeline, all of that pipeline related data is also deleted. The pipeline have deals not deleted ,first you have to move the deals in pipeline before delete it.<br>
+                <br>
+                <div class="danger-panel"><strong>IMPORTANT:</strong> This process cannot be reversed</div>
+            </section>
+            <!-- Stages -->
+            <section id=stages>
+                <div class="page-header">
+                    <h3>Stages</h3>
+                    <hr class="notop">
+                </div>
+                <p>Stages are added in pipeline.You can create different stages by pipeline.Means every pipeline have different stages. </p>
+
+                <h4>HOW TO ADD A STAGE</h4>
+                <p>To add a stage, click on <strong>STAGES</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Stage</strong> button (as shown below). You will get a new popup window for you to fill in stage name,pipeline for stage. </p>
+                <h5><img src="assets/images/stage.png" alt="Stage"></h5>
+                Fill up the stage name and pipeline for add new stage.
+
+                <h4>HOW TO EDIT A STAGE</h4>
+                Just click on stage name to edit it,change it and then click arrow for save.
+                <h4>HOW TO CHANGE STAGE ORDER IN PIPELINE VIEW</h4>
+                Move the stages position by select stage and drag , drop the stage up and down.This will update the stage view order on dashboard for pipeline.
+                <h5><img src="assets/images/stage-drag-drop.png" alt="Stage Drag Drop"></h5>
+                <h4>HOW TO DELETE A STAGE</h4>
+                Do delete a stage, you simply click the delete icon (<img src="assets/images/delete-icon.png" alt="delete" width="14" height="14" align="absmiddle">)
+                . When you delete a stage, all of that stage related data is also deleted. The stage have deals not deleted ,first you have to move the deals in stage before delete it.<br>
+                <br>
+            </section>
+            <!-- User -->
+            <section id=users>
+                <div class="page-header">
+                    <h3>Users(Members)</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can create user in application and add later can add it to any deal. </p>
+                <p>There are four types of users. (a)Admin (b)Manager (c)Staff (d)Client</p>                
+                <h4>HOW TO ADD A USER</h4>
+                <p>To add a contact, click on <strong>Member</strong> on the <strong>MAIN MENU</strong> and then goes to admin page for add admin, manager page for add manager & staff page to add staff </p>
+                <h5><img src="assets/images/user.png" alt="users"><br></h5> 
+
+                <h4>Profile</h4>
+                <p> You will see the profile and update picture and details</p>
+                <h5><img src="assets/images/profile.png" alt="user profile"><br></h5>  
+                <br>
+                <h4>GROUPS</h4>
+                <p>Go to Settings then groups. You can create groups for team members.Each team member can belong to a particular GROUP. The starting point is to make sure that you have some groups. The system comes with some some default groups (which you can delete and create you own if you want).</p>
+                <img src="assets/images/group.png" alt="groups"><br>
+                <h4>ROLES</h4>
+                Go to Settings then roles.Roles are assign to team members for modules permission. You can set permssion for admin, manager & staff which menu they can see like contact, user etc <br>
+                Admin Role:-  For Amin Only <br>
+                Staff Role:-  For Manager & Staff <br>
+                <h5><img src="assets/images/roles.png" alt="roles"><br></h5>
+            </section>
+            <!-- Dashboard -->
+            <section id=dashboard>
+                <div class="page-header">
+                    <h3>DASHBOARD</h3>
+                    <hr class="notop">
+                </div>
+                <p>Dashboard where you will see all deals by pipeline.You can change pipeline for view deals and manage it.</p>
+                <h5><img src="assets/images/dashboard.png" alt="dashboard"></h5>
+                <h4>HOW TO CREATE A DEAL</h4>
+                <p>To add a deal, click on <strong>Dashboard</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Deal</strong> button(See above) . You will get a new popup window for you to fill in Deal name etc details for deal. </p>
+                <h4><strong>DASHBOARD DEAL LIST</strong></h4>
+                <p>You can view the list of deals on list dashboard.Add new deal from list dashboard.</p>
+                <h5><img src="assets/images/dashboard-list.png" alt="dashboard list"></h5>
+            </section>
+            <!-- Deals -->
+            <section id=deals>
+                <div class="page-header">
+                    <h3>Deal View/Dashboard</h3>
+                    <hr class="notop">
+                </div>
+                <p>Deal are the main center point or center of our application.All thinks belongs to deals.Means we are going to add every think like sources,product,files,notes,contacts etc in deal. </p>
+                <h4> DEAL View/DASHBOARD</h4>
+                The Deal dashboard is main part where you are going to add/edit/delete various modules in deal.
+                <h5><img src="assets/images/deal-view.png" alt="deal view"></h5>
+                The various tabs in deal dashboard as:-
+                <ul>
+                    <li>GENERAL</li>
+                    <li>TASK</li>
+                    <li>PRODUCT</li>
+                    <li>SOURCE</li>
+                    <li>CONTACTS</li>
+                    <li>FILES</li>                    
+                    <li>DISCUSSION</li>
+                    <li>CUSTOMER FEEDBACK</li>
+                    <li>NOTES(PRIVATE)</li>
+                    <li>INVOICES</li>
+                    <li>CUSTOM FIELDS</li>
+                    <li>SETTINGS</li>
+                </ul>
+
+                <h4>GENERAL</h4>
+                <p>A details of the deal shown note,members,sources,products,files,activity of deal,calender etc(See above)</p>
+                <h4>TASKS</h4>
+                <p>View/Add/Edit/Delete tasks that are related to deal.The task in deal are visible to all in deal.</p>            
+                <h4>PRODUCTS</h4>
+                <p>Search/Add/View/Delete the products. You can search the products and then click on product for add.Also update product quantity and discount on product.</p>                             
+                <h4>SOURCES</h4>
+                <p>Search/Add/View/Delete the sources. You can search the sources and then click on source for add</p>
+                <h4>CONTACTS</h4>
+                <p>Search/Add/View/Delete the contacts. You can search the contacts and then click on contact for add.</p>
+                <h4>FILES</h4>
+                <p>View/Add/Edit/Delete deal files</p>               
+                <h4>DISCUSSION</h4>
+                <p>View/Add/Edit/Delete deal comments/messages & reply to messages.</p>
+                <h4>CUSTOMER FEEDBACK</h4>
+                <p>Customer can give feedback using this tab on deal.You can reply to any feedback.</p>
+                <h4>NOTES</h4>
+                <p> You can Add/Edit notes.These notes are private and only visible to you.</p>
+                <h4>INVOICES</h4>
+                <p> You can Add/Edit/Delete deal invoices.</p>
+                <h4>CUSTOM FIELDS</h4>
+                <p> You can change values of custom fields in deal from this tab.</p>
+                <h4>SETTINGS</h4>
+                <p>Client Permissions:- Allow or not clients to view tab like tasks, products, sources, contacts, files, custom fields</p>
+
+                <h4>HOW TO DELETE A DEAL</h4>
+                To delete a deal, you simply click the delete button. When you delete a deal, all of that deal related data is also deleted. <br>
+            </section>
+            <!-- Company -->
+            <section id=company>
+                <div class="page-header">
+                    <h3>Clients(Company)</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can add any company information in application.You can add clients,contacts,deals,invoices in company </p>
+
+                <h4>HOW TO ADD A COMPANY</h4>
+                <p> To add a company, click on <strong>CLIENTS</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Company</strong> button (as shown below). You will get a new popup window for you to fill in company name etc details. Fill up the company details and save it.</p>
+                <h5><img src="assets/images/company.png" alt="companies"> </h5>
+
+                <h4>COMPANY LIST VIEW</h4>
+                <h5><img src="assets/images/company-list.png" alt="companies"> </h5>
+                <h4>COMPANY VIEW PAGE</h4>
+                Just click on view button on company list and you will see the clients, deals, invoices in company and company details. 
+                <h5><img src="assets/images/company-view.png" alt="company view" ></h5>
+                <h4>HOW TO DELETE A COMPANY</h4>
+                Do delete a company, you simply click the delete icon (<img src="assets/images/delete-icon.png" alt="delete" width="14" height="14" align="absmiddle">).<br>
+                <br>
+            </section>
+            <!-- Task -->
+            <section id=tasks>
+                <div class="page-header">
+                    <h3>Task</h3>
+                    <hr class="notop">
+                </div>
+                <p>Task is added in any deal mean you can assign any task for deal.There are 2 menu for Tasks </p>
+                <ul>                 
+                    <li><strong>Task</strong></li>
+                    <li><strong>All Task (Admin Only)</strong></li>
+                </ul>
+
+                <h4>Task(My Task)</h4>
+                <p>Admin/User can able to View/Edit/Delete task created by him.Means my task where admin/user see the task assign to him or created by him </p>               
+                <h5><img src="assets/images/task-dashboard.png" alt="tasks"></h5>
+                <div class="info-panel"><strong>Search/Filter Task :-</strong> The admin/user can search/filter task by pipeline and the type of the task(Email,Call etc).</div>
+                <h5><img src="assets/images/task.png" alt="tasks"></h5>
+                <h4>ALL Task(Admin Only)</h4>
+                <p>Admin can able to View/Edit/Delete all the task in the application.Here admin will see the task created by which user,which pipeline or stage. </p>
+                <div class="info-panel"><strong>Search/Filter Task :-</strong> The admin can search/filter task by pipeline, user and  the type of the task(Email,Call etc).</div>
+                <h5><img src="assets/images/task-all.png" alt="all tasks"></h5>             
+                <br>
+            </section>
+            <!-- Labels -->
+            <section id=labels>
+                <div class="page-header">
+                    <h3>Labels</h3>
+                    <hr class="notop">
+                </div>
+                <p>Labels are added in pipeline.You can create different labels by pipeline.Means every pipeline have different labels. </p>
+                <h4>HOW TO ADD A LABEL</h4>
+                <p>To add a label, click on <strong>LABELS</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ ADD LABEL</strong> button (as shown below). You will get a new popup window for you to fill in label name,pipeline for label. </p>
+                <h5><img src="assets/images/labels.png" alt="Label"></h5>
+                Fill up the label name,color for label background and pipeline for add new label.
+                <h4>HOW TO EDIT A LABEL</h4>
+                Just click on label name to edit it,change it and then click arrow for save.              
+                <h4>HOW TO DELETE A LABEL</h4>
+                Do delete a label, you simply click the delete icon (<img src="assets/images/delete-icon.png" alt="delete" width="14" height="14" align="absmiddle">)
+                . When you delete a label, all of that label related data is also deleted.<br>
+                <br>
+            </section>
+            <!-- Sales -->
+            <section id="sales">
+                <div class="page-header">
+                    <h3>Sales</h3>
+                    <hr class="notop">
+                </div>
+                <p>Sales module you will see invoices,expenses,payments & tax rates. </p>
+                <h4>Invoices</h4>
+                <p>To add a invoice, click on <strong>INVOICES</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ ADD INVOICE</strong> button (as shown below). You will get a new popup window for you to fill in invoice details. </p>
+                <h5><img src="assets/images/invoices.png" alt="invoices"></h5>
+                <h4>EXPENSES</h4>
+                <p>To add a expense, click on <strong>EXPENSES</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ ADD EXPENSE</strong> button (as shown below). You will get a new popup window for you to fill in expenses details for deal or member. </p>
+                <h5><img src="assets/images/expense.png" alt="expenses"></h5>
+                <h4>PAYMENTS</h4>
+                <p>Here you can see all payments made inside invoices.</p>
+                <h5><img src="assets/images/invoice-payments.png" alt="payments"></h5>
+                <h4>TAX RATES</h4>
+                <p> You can add/edit/delete tax rates for invoices.</p>
+                <h5><img src="assets/images/invoice-tax.png" alt="tax rate"></h5>
+
+                <br>
+                <br>
+            </section>
+            <!-- Contacts -->
+            <section id=contacts>
+                <div class="page-header">
+                    <h3>Contact</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can create contacts in application and add any number of contacts under or not an company. </p>
+
+                <h4>HOW TO ADD A CONTACT</h4>
+                <p> To add a contact, click on <strong>CONTACT</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Contact</strong> button (as shown below). You will get a new popup window for you to fill in contact name,company etc details. </p>
+                <h5><img src="assets/images/contact.png" alt="contacts">  </h5>                
+                Fill up the contact details and save it.
+                <h4>HOW TO VIEW & EDIT A CONTACT</h4>
+                Just click Edit button to change contact details.You can also view the deals in contacts at bottom deals table.               
+                <h5><img src="assets/images/contact-view.png" alt="contact view"> </h5>  
+            </section>
+            <!-- Products -->
+            <section id=products>
+                <div class="page-header">
+                    <h3>Product</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can create products in application and later can add it to any deal. </p>
+
+                <h4>HOW TO ADD A PRODUCT</h4>
+                <p>To add a contact, click on <strong>PRODUCTS</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Product</strong> button (as shown below). You will get a new popup window for you to fill in product name,price etc details. </p>
+                <h5><img src="assets/images/product.png" alt="products"><br></h5> 
+                Fill up the product details and save it.
+                <h4>HOW TO VIEW & EDIT A PRODUCT</h4>
+                <p> Just click on product name etc  to edit it,change it and then click arrow for save.</p>
+                <p> You can <b> view </b>the deals in product.Just click on view button and you will goes to product view page where you see the deals in product   </p>             
+                <br>
+            </section>
+            <!-- Source -->
+            <section id=sources>
+                <div class="page-header">
+                    <h3>Source</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can create sources in application and add later can add it to any deal. </p>
+
+                <h4>HOW TO ADD A SOURCE</h4>
+                <p>To add a source, click on <strong>SOURCES</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Source</strong> button (as shown below). You will get a new popup window for you to fill in source name. </p>
+                <h5><img src="assets/images/source.png" alt="sources" ><br>  </h5> 
+                Fill up the source details and save it.
+                <h4>HOW TO VIEW & EDIT A SOURCE</h4>
+                <p> Just click on source name  to edit it,change it and then click arrow for save.</P>
+                <p> You can  view the deals in source.Just click on view button and you will goes to source view page where you see the deals in source.</p>  
+                <br>
+            </section>
+            <!-- Activity -->
+            <section id=activity>
+                <div class="page-header">
+                    <h3>Activity</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can view the all the activity done regarding the deal.You can see all activity related to task,source,product,contact etc done in deal.</p>
+                <div class="info-panel"><strong>Search/Filter Activity :-</strong>You can filter the activity by user,pipeline,date range and type of activity.</div>
+                <img src="assets/images/activity.png" alt="Activity"><br>                                                   
+            </section>
+            <!-- Report -->
+            <section id=reports>
+                <div class="page-header">
+                    <h3>Report</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can view the report of the deals.There are 2 types of reports </p>
+                <ul>
+                    <li>Pie Chart</li>
+                    <li>Table</li>
+                </ul>
+                <div class="info-panel"><strong>Search/Filter Report :-</strong>Filter Report by Pipeline, User, Source, Product, Date Range and price or number of deals.</div>
+                <img src="assets/images/report.png" alt="Report" ><br>                                                                                                 
+                <br>
+            </section>
+            <!-- Message -->
+            <section id=message>
+                <div class="page-header">
+                    <h3>Message</h3>
+                    <hr class="notop">
+                </div>
+                <p>In application you can also message for 4 type of users admin,manager,staff,client with different permissions.The message system allow you to message your members.</p>
+                <img src="assets/images/messages.png" alt="messages"><br>                                                                                                 
+                <br>
+            </section>
+            <!-- Export -->
+            <section id=export>
+                <div class="page-header">
+                    <h3>Export</h3>
+                    <hr class="notop">
+                </div>
+                <p>In application you can export data.</p>
+                <ul>
+                    <li>Deals  - Export deals by pipeline,date range and type like active ,won ,losss</li>
+                    <li>Tasks - Export task by date range or all task(admin)</li>
+                    <li>Contacts - Export all contacts in application.</li>
+                    <li>Companies - Export all companies in application.</li>
+                </ul>
+                <img src="assets/images/export.png" alt="export" ><br>                                                                                                 
+                <br>
+            </section> 
+            <!-- Tickets -->
+            <section id=tickets>
+                <div class="page-header">
+                    <h3>Support Tickets</h3>
+                    <hr class="notop">
+                </div>
+                <p>In application you can create a ticket.You or user can reply to any ticket and also can send attachments with ticket.</p>
+                <img src="assets/images/ticket.png" alt="tickets" ><br>                                                                                                 
+                <br>
+                <h4>TICKET VIEW</h4>
+                You can comment on any ticket and update ticket status
+                <h5><img src="assets/images/ticket-view.png" alt="ticket view"></h5> 
+            </section>
+            <!-- Custom fields -->
+            <section id=customs>
+                <div class="page-header">
+                    <h3>Custom Fields</h3>
+                    <hr class="notop">
+                </div>
+                <p>You can add any custom fields for deals , contact, company in application.</p>
+                <ul>
+                    <li>Custom fields for Deals</li>
+                    <li>Custom fields for Contacts</li>
+                    <li>Custom fields for Company</li>
+                </ul>
+                <h4>HOW TO ADD A CUSTOM FIELD</h4>
+                <p>To add a company, click on <strong>Custom Fields</strong> on the <strong>MAIN MENU</strong> and then click on the <strong>+ Add Custom Field</strong> button (as shown below). You will get a new popup window for you to fill in Custom fields name etc details. </p>
+                <h5><img src="assets/images/custom-fields.png" alt="custom fields"> </h5>
+                Fill up the custom field details and save it.
+                <h4>HOW TO DELETE A CUSTOM FIELD</h4>
+                <p>Do delete a custom field, you simply click the delete icon (<img src="assets/images/delete-icon.png" alt="delete" width="14" height="14" align="absmiddle">).</p><br>
+                <br>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings">
+                <div class="page-header">
+                    <h3>SYSTEM SETTINGS</h3>
+                    <hr class="notop">
+                </div>
+                <p> In application you have setting section.Where you can manage all application settings</p>
+                <h5>The settings section has various tabs, which will allow you to configure and do chganges in application. 
+                    <br>
+                    <br>
+                    <img src="assets/images/settings.png" alt="settings"><br>                          
+                </h5>
+                <h4>SYSTEM SETTINGS</h4>
+                General settings allow you to set the system wide config values. These include
+                <ul>
+                    <li><strong>TITLE:-</strong>  Displayed in the site header text or logo.</li> 
+                    <li><strong>TITLE TEXT:-</strong>  Displayed in the site header the text</li> 
+                    <li><strong>LOGO:-</strong>  Displayed in the site header</li>                   
+                    <li><strong>LANGUAGE:-</strong>  Application language</li>                      
+                    <li><strong>CURRENCY :-</strong> The international format currency symbol for your default currency.</li>
+                    <li><strong>CURRENCY SYMBOL :-</strong> The symbol that is displayed next to amounts</li>
+                    <li><strong>DATE FORMAT :-</strong>  Used to display dates.</li>   
+                    <li><strong>TIME FORMAT :-</strong>  Used to display time in application.</li>
+                    <li><strong>TIME ZONE :-</strong>  Used to set time zone according to location.</li>   
+                </ul>                        
+                <h4>COMPANY  DETAILS</h4>
+                <p>This is where you set all your company information (name, telephone, etc)</p>
+                <ul>
+                    <li><strong>COMPANY NAME :-</strong>  The name of company for e-mails etc.</li>
+                    <li><strong>SYSTEM EMAIL :-</strong>  The email address for application.</li>
+                    <li><strong>EMAIL (From Name) :-</strong> Email address From where the application emails send. .</li>
+                </ul>
+                <h4>GROUPS</h4>
+                <p>You can create groups for team members.Each team member can belong to a particular GROUP. The starting point is to make sure that you have some groups. The system comes with some some default groups (which you can delete and create you own if you want).</p>
+                <img src="assets/images/group.png" alt="groups"><br>
+                <h4>ROLES</h4>
+                Roles are assign to team members for modules permission. You can set permssion for admin, manager & staff which menu they can see like contact, user etc
+                <img src="assets/images/roles.png" alt="roles"><br>
+                <h4>EMAIL SETTINGS</h4>
+                You can change email notification for add user, ticket & messages. SMTP for email you can also add here.
+                <h4>CUSTOM FIELDS</h4>
+                Custom fields for deal, contacts & Company. <br>
+                <img src="assets/images/custom-fields.png" alt="custom fields">
+                <h4>TICKETS  DEPARTMENTS</h4>
+                <p>You can create as many departments as you need (e.g. Support, Sales etc)</p>               
+                <h4>PIPELINE</h4>
+                Set Default pipeline for application.
+                <h5><img src="assets/images/pipeline-default.png" alt="pipeline active"></h5>
+                <h4>PAYMENT METHODS</h4>
+                Can Add/Edit/Delete payment methods for invoices.
+                <h4>EXPENSE  CATEGORY</h4>
+                Can Add/Edit/Delete Category for expenses
+                <h4>DATABASE BACKUP</h4>
+                <h5>Its vitally important that you always maintain a backup copy of your database. The application provides you with an easy way to download a backup copy of your database.<br>
+                    <br>
+                </h5>
+                <p><br>
+                </p>
+            </section>
+        </div>
+    </body>   
+</html>

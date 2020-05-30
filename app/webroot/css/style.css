@@ -191,7 +191,7 @@ th.visible-xxs, td.visible-xxs {
     .main-box {
     margin-bottom: 10px;
 }
-.deal-right {
+.job-right {
 text-align: center;
 }
 }
@@ -1251,6 +1251,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
 .btn-white {
     background: #fff;
     color: #000;
+    border: 1px solid #2c2c2c;
 }
 .btn-white:hover {
     background-color: #666;
@@ -1728,7 +1729,8 @@ label {
     border-radius: 3px;
     background-clip: padding-box;
     border-color: #e7ebee;
-    border-width: 2px;
+    border-color: #aaa;
+    border-width: 1px;
     box-shadow: none;
     font-size: 13px;
 }
@@ -4141,7 +4143,9 @@ svg {
 }
 .theme-whbl .btn-primary:hover, .theme-whbl .btn-primary:focus, .theme-whbl .btn-primary:active, .theme-whbl .btn-primary.active, .theme-whbl .open .dropdown-toggle.btn-primary {
     background-color: #666;
+    background-color: #F5CB5B;
     border-color: #666;
+    border-color: #F5CB5B;
 }
 .theme-whbl .btn-success {
     background-color: #000;
@@ -4428,4 +4432,8 @@ svg {
 footer .row:after {
     padding: 0;
     margin: 0;    
+}
+.tox-tinymce {
+    border: 1px solid #aaa!important;
+    border-radius: 3px!important;
 }
